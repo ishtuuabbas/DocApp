@@ -1,0 +1,54 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Firefox */
+/* Note: Firefox doesn't support rounded corners for scrollbar */
+/* For Firefox, you can only adjust the width */
+/* You may need to use JavaScript for a more comprehensive solution in Firefox */
+::-moz-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-moz-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+::-moz-scrollbar-thumb {
+  background: #888; /* Thumb color */
+}

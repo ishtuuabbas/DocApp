@@ -1,0 +1,113 @@
+.containerDiv {
+  /* border: 2px solid red; */
+  font-family: "Inter", sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  /* border-bottom: 1px solid blue; */
+  justify-content: center;
+}
+.logoDiv {
+  width: 130px;
+  text-align: center;
+  /* border: 2px solid blue; */
+  height: 130px;
+}
+.logo {
+  width: 100%;
+  /* border: 2px solid red; */
+}
+.mainText {
+  margin-left: 2rem;
+  /* border: 2px solid black; */
+}
+.clinicName {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.sologan {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* Bio Section */
+.mainDiv {
+  /* border: 2px solid blue; */
+}
+
+.bio {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bioItem {
+  margin: 0.9rem;
+  /* display: flex;
+    align-items: center; */
+}
+
+.bioKey {
+  margin-left: 0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.bioValue {
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+}
+
+/* Bottom Body */
+
+.bottomBody {
+  /* border: 2px solid green; */
+  border-top: 1px solid #b6b6b6;
+  display: flex;
+}
+
+.sideInfo {
+  /* border: 2px solid red; */
+  height: 65vh;
+  width: 40vw;
+  padding-top: 1.5rem;
+}
+.whiteSpace {
+  /* border: 2px solid black; */
+  border-left: 1px solid #b6b6b6;
+  width: 100%;
+}
+/* Side Info */
+.infoContainer {
+  /* border: 2px solid red; */
+  padding: 0rem 1rem;
+  padding-right: 0;
+}
+.infoItem {
+  /* border: 2px solid green; */
+  padding: 1rem 0rem;
+}
+.infoKey {
+  margin-left: 0.3rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.infoValue {
+  padding: 0 0.3rem;
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+}
+/* Footer */
+
+.footer {
+  /* border: 2px solid red; */
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.footerPara {
+  /* border: 2px solid green; */
+}
