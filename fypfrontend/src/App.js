@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import AllUsers from "./pages/User/AllUsers";
 import Login from "./pages/Auth/Login";
-import Home from "./pages/User/Home";
 import AddUser from "./pages/User/AddUser";
 import EditUser from "./pages/User/EditUser";
 import { AuthContext } from "./store/auth-context";
@@ -15,6 +14,8 @@ import AddDoctor from "./pages/Doctor/AddDoctor";
 import Paperbase from "./layout/Dashboard/Paperbase";
 import Revenue from "./pages/Stats/Revenue";
 import ClinicStats from "./pages/Stats/PatientStats";
+import Home from "./pages/User/Home";
+import LandingPage from "./pages/Home"
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -68,7 +69,8 @@ const App = () => {
   const unAuthRoutes = (
     <Routes>
       {/* USERS ROUTES */}
-      <Route path="/" element={<Login />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 
