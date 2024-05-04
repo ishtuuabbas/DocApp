@@ -1,3 +1,4 @@
+import './App.css';
 import React, { useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import AllUsers from "./pages/User/AllUsers";
@@ -15,7 +16,7 @@ import Paperbase from "./layout/Dashboard/Paperbase";
 import Revenue from "./pages/Stats/Revenue";
 import ClinicStats from "./pages/Stats/PatientStats";
 import Home from "./pages/User/Home";
-import LandingPage from "./pages/Home"
+import LandingPage from "./components/Home/Home/Home"
 
 const App = () => {
   const authCtx = useContext(AuthContext);
