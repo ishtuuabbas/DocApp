@@ -13,12 +13,12 @@ const Service = () => {
 
     return (
         <>
-        <Header />
+        {/* <Header /> */}
 
         <section className="container" style={{marginTop: 200, marginBottom:200}}>
             <div className='mb-5 section-title text-center'>
                 <h2>Services</h2>
-                <p className='m-0'>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <p className='m-0'>We empower clinics and doctors with innovative solutions for streamlined operations, enhanced patient care, and secure data management.</p>
             </div>
             <div className="container">
                 <div className="row align-items-center">
@@ -36,7 +36,7 @@ const Service = () => {
                     <div className="col-lg-4">
                         <div className="service-content ps-4 mt-4 mt-lg-0">
                             <h2>Personal care <br />healthy living</h2>
-                            <p className="mt-4 mb-5 text-secondary form-text">We provide best leading medicle service Nulla perferendis veniam deleniti ipsum officia dolores repellat laudantium obcaecati neque.</p>
+                            <p className="mt-4 mb-5 text-secondary form-text">Personal care for healthy living encompasses the practices we adopt to maintain our physical and mental well-being. This includes prioritizing a balanced diet rich in fruits, vegetables, and whole grains, engaging in regular physical activity, getting sufficient sleep, and managing stress effectively.</p>
                             <Link to={'/service'} className="btn-get-started scrollto">Services</Link>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const Service = () => {
             </div>
         </section>
         
-<Footer />
+{/* <Footer /> */}
 </>
     )
     

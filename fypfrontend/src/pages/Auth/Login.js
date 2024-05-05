@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div
       style={{
-        backgroundColor: "#F7F7F7",
+        // backgroundColor: "#F7F7F7",
         height: "100vh",
         margin: "auto",
         display: "flex",
@@ -65,9 +65,7 @@ const Login = () => {
           alignItems: "center",
         }}
       >
-        <h1 style={{ marginBottom: 20, fontSize: 30, fontWeight: "700" }}>
-          Clinics Management System
-        </h1>
+     
         <img width={200} height={150} src={logo} alt="logo" />
       </div>
 

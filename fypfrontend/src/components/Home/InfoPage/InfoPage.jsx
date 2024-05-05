@@ -13,8 +13,7 @@ const InfoPage = () => {
                         <div className="content">
                             <h3>Why Choose Us?</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                            Choose us as your trusted digitization partner because we go beyond software. We tailor solutions to your clinic's unique needs, prioritize ongoing support, and ensure a smooth transition that maximizes efficiency, patient care, and data security.
                             </p>
                             <div className="text-center">
                                 <Link href="/" className="more-btn">Learn More <i className="bx bx-chevron-right"></i></Link>
@@ -29,15 +28,15 @@ const InfoPage = () => {
                                         <FaHouseUser className="icon"/>
                                         <h4>Appointment</h4>
                                         <small className='text-secondary'>24 Hours Service</small>
-                                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                                        <p>Schedule your appointment for a smoother and more efficient healthcare experience.</p>
                                     </div>
                                 </div>
                                 <div className="col-xl-4 d-flex align-items-stretch">
                                     <div className="icon-box mt-4 mt-xl-0">
                                         <FaHeadset className="icon"/>
                                         <h4>Emegency Cases</h4>
-                                        <h6 className='text-secondary'>+88 01751 040425</h6>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facilis perferendis quia maxime. Laborum excepturi pariatur laboriosam nihil, dolor molestias.</p>
+                                        <h6 className='text-secondary'>05815-960245</h6>
+                                        <p>For emergencies, call your local emergency number immediately.</p>
                                     </div>
                                 </div>
                                 <div className="col-xl-4 d-flex align-items-stretch">

@@ -40,7 +40,7 @@ const Contact = () => {
                                     <FaLocationArrow className='icon' />
                                     <div>
                                         <h4>Location:</h4>
-                                        <p>Ali Chowk Ali Abad skardu near Singham Shadii Hall & Blue Sky Hotel Skardu</p>
+                                        <p>Degree College for Girls, Skardu</p>
                                     </div>
                                 </div>
 
@@ -56,7 +56,7 @@ const Contact = () => {
                                     <FaPhoneAlt className='icon' />
                                     <div>
                                         <h4>Call:</h4>
-                                        <p>+92 3437714631</p>
+                                        <p>05815-960245</p>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +114,8 @@ const Contact = () => {
                 <div>
                     <div className="container">
                         {/* eslint-disable-next-line */}
-                        <iframe style={{ border: 0, width: "100%", height: "350px" }} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+                   
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675201.6768348725!2d73.56297730807671!3d34.909504119191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e463eddd6e4255%3A0x518dcc549077eb8!2sDegree%20College%20for%20Women%20Skardu!5e0!3m2!1sen!2s!4v1714892607877!5m2!1sen!2s" style={{ border: 0, width: "100%", height: "350px" }} frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>

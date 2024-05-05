@@ -24,7 +24,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import About from './components/About/About';
-import Service from './components/Home/Services/Service';
+import Service from './components/Service/Service'
 import Contact from './components/Contact/Contact';
 
 const App = () => {
