@@ -8,6 +8,7 @@ import HeroSection from '../HeroSection/HeroSection';
 import InfoPage from '../InfoPage/InfoPage';
 import Header from '../../Shared/Header/Header';
 import Service from '../Services/Service';
+
 import Gallery from '../Gallery/Gallery';
 
 

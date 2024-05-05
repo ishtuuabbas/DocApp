@@ -18,6 +18,15 @@ import ClinicStats from "./pages/Stats/PatientStats";
 import Home from "./pages/User/Home";
 import LandingPage from "./components/Home/Home/Home"
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import About from './components/About/About';
+import Service from './components/Home/Services/Service';
+import Contact from './components/Contact/Contact';
+
 const App = () => {
   const authCtx = useContext(AuthContext);
   // console.log(authCtx.user);
@@ -71,6 +80,9 @@ const App = () => {
     <Routes>
       {/* USERS ROUTES */}
       <Route path="/" element={<LandingPage />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/service" element={<Service />} />
       <Route path="/login" element={<Login />} />
     </Routes>
   );

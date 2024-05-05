@@ -4,9 +4,17 @@ import img from '../../../images/doc/doc1.jpg'
 import img2 from '../../../images/doc/doc4.jpg'
 import img3 from '../../../images/doc/doctor 5.jpg'
 import { Link } from 'react-router-dom';
+import Footer from '../../Shared/Footer/Footer'
+import Header from '../../Shared/Header/Header';
+
 
 const Service = () => {
+    
+
     return (
+        <>
+        <Header />
+
         <section className="container" style={{marginTop: 200, marginBottom:200}}>
             <div className='mb-5 section-title text-center'>
                 <h2>Services</h2>
@@ -35,7 +43,12 @@ const Service = () => {
                 </div>
             </div>
         </section>
+        
+<Footer />
+</>
     )
-}
+    
+
+};
 
 export default Service
