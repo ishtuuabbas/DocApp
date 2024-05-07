@@ -45,7 +45,7 @@ const PatientItem = ({ patient, onDelete }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/delete/${patient._id}`,
+        `http://localhost:8080/api/patient/delete/${patient._id}`,
         {
           method: "DELETE",
           headers: {

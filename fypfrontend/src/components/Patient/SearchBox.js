@@ -17,7 +17,7 @@ const SearchBox = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/search?q=${searchQuery}`,
+        `http://localhost:8080/api/patient/search?q=${searchQuery}`,
         {
           method: "GET",
           headers: {

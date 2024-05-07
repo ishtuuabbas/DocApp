@@ -27,6 +27,7 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(process.env.MONGODB_SECRET_KEY)
   .then((result) => {
+    console.log("db connected, listing to 8008")
     app.listen(8080);
   })
   .catch((err) => console.log(err));

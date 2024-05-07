@@ -13,7 +13,7 @@ const GenderRatio = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/gender-ratio`,
+        `http://localhost:8080/api/patient/gender-ratio`,
         {
           method: "GET",
           headers: {

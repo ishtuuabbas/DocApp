@@ -23,7 +23,7 @@ const PatientDetail = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/refund/${patientId}`,
+        `http://localhost:8080/api/patient/refund/${patientId}`,
         {
           method: "GET",
           headers: {
@@ -49,7 +49,7 @@ const PatientDetail = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/${patientId}/new/record`,
+        `http://localhost:8080/api/patient/${patientId}/new/record`,
         {
           method: "POST",
           headers: {
@@ -78,7 +78,7 @@ const PatientDetail = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://doctorapp-gagm.onrender.com/api/patient/${patientId}/all-records`,
+          `http://localhost:8080/api/patient/${patientId}/all-records`,
           {
             method: "GET",
             headers: {
@@ -102,7 +102,7 @@ const PatientDetail = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          "https://doctorapp-gagm.onrender.com/api/doctors/name",
+          "http://localhost:8080/api/doctors/name",
           {
             method: "GET",
             headers: {
@@ -126,7 +126,7 @@ const PatientDetail = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://doctorapp-gagm.onrender.com/api/patient/${patientId}`,
+          `http://localhost:8080/api/patient/${patientId}`,
           {
             method: "GET",
             headers: {

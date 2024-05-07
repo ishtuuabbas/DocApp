@@ -112,7 +112,7 @@ export const transferPatientsToBackend = async (authCtx) => {
 
       // Assuming you have a backend API endpoint to receive the data
       const apiUrl =
-        "https://doctorapp-gagm.onrender.com/api/patient/create/many";
+        "http://localhost:8080/api/patient/create/many";
 
       // Make an HTTP POST request to send the data to the backend
       fetch(apiUrl, {

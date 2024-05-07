@@ -14,7 +14,7 @@ const AddDoctor = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://doctorapp-gagm.onrender.com/api/doctor/create",
+        "http://localhost:8080/api/doctor/create",
         {
           method: "POST",
           headers: {

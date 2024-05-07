@@ -1,3 +1,4 @@
+
 import React, { Fragment, useContext, useState } from "react";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
@@ -31,7 +32,7 @@ const DoctorItem = ({ doctor, onDelete }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/doctor/delete/${doctor._id}`,
+        `http://localhost:8080/api/doctor/delete/${doctor._id}`,
         {
           method: "DELETE",
           headers: {

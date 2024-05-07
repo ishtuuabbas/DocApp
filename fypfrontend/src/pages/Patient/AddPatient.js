@@ -19,7 +19,7 @@ const AddPatient = () => {
         try {
           setIsLoading(true);
           const response = await fetch(
-            "https://doctorapp-gagm.onrender.com/api/patient/create",
+            "http://localhost:8080/api/patient/create",
             {
               method: "POST",
               headers: {
@@ -52,7 +52,7 @@ const AddPatient = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://doctorapp-gagm.onrender.com/api/doctors/name",
+        "http://localhost:8080/api/doctors/name",
         {
           method: "GET",
           headers: {

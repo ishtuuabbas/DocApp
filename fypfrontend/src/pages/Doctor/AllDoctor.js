@@ -28,7 +28,7 @@ const AllDoctor = () => {
 
       setIsLoading(true);
       const response = await fetch(
-        "https://doctorapp-gagm.onrender.com/api/doctors",
+        "http://localhost:8080/api/doctors",
         {
           method: "GET",
           headers: {

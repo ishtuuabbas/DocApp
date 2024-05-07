@@ -76,7 +76,7 @@ const GrowthTrend = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/growth-trend?trend=${scale}`,
+        `http://localhost:8080/api/patient/growth-trend?trend=${scale}`,
         {
           method: "GET",
           headers: {

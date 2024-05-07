@@ -13,7 +13,7 @@ const AgeDistribution = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/age-distribution`,
+        `http://localhost:8080/api/patient/age-distribution`,
         {
           method: "GET",
           headers: {

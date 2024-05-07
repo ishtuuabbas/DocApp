@@ -15,7 +15,7 @@ const AddUser = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://doctorapp-gagm.onrender.com/api/register",
+        "http://localhost:8080/api/register",
         {
           method: "POST",
           headers: {

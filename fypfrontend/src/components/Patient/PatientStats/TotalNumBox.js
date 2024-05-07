@@ -25,7 +25,7 @@ export const TotalNumBox = ({ val, url }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/${url}/total`,
+        `http://localhost:8080/api/${url}/total`,
         {
           method: "GET",
           headers: {

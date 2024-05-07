@@ -1,0 +1,12 @@
+[
+{
+  "_id": {
+    "$oid": "661e48a13570bc1f89fdbad6"
+  },
+  "email": "ishu11@admin.com",
+  "name": "Ishrat",
+  "password": "$2b$12$TSJdnppRhfDwHXpDqIsta.bLR/ZyU7tyFQuaGPrSHGw6QsJ4YzNT2",
+  "role": "superadmin",
+  "refundedPatients": [],
+  "__v": 0
+}]

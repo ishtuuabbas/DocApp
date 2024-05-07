@@ -28,7 +28,7 @@ const AllPatients = () => {
   const getAllPatients = async () => {
     try {
       const responseData = await sendRequest(
-        "https://doctorapp-gagm.onrender.com/api/patients",
+        "http://localhost:8080/api/patients",
         "GET",
         null,
         {

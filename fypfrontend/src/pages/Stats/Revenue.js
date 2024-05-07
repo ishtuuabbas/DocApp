@@ -13,7 +13,7 @@ const Revenue = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/patient/total-revenue`,
+        `http://localhost:8080/api/patient/total-revenue`,
         {
           method: "GET",
           headers: {

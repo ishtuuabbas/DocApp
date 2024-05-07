@@ -20,7 +20,7 @@ const EditUser = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://doctorapp-gagm.onrender.com/api/user/${userId}`,
+          `http://localhost:8080/api/user/${userId}`,
           {
             method: "GET",
             headers: {
@@ -47,7 +47,7 @@ const EditUser = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://doctorapp-gagm.onrender.com/api/user/edit/${userId}`,
+        `http://localhost:8080/api/user/edit/${userId}`,
         {
           method: "PATCH",
           headers: {
