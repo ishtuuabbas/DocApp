@@ -11,6 +11,7 @@ import EditPatient from "./pages/Patient/EditPatient";
 import AddPatient from "./pages/Patient/AddPatient";
 import PatientDetail from "./pages/Patient/PatientDetail";
 import AllDoctor from "./pages/Doctor/AllDoctor";
+import AllContact from './pages/Contacts';
 import AddDoctor from "./pages/Doctor/AddDoctor";
 import Paperbase from "./layout/Dashboard/Paperbase";
 import Revenue from "./pages/Stats/Revenue";
@@ -73,6 +74,7 @@ const App = () => {
       <Route path="/doctors" element={<AllDoctor />} />
 
       <Route path="/doctor/create" element={<AddDoctor />} />
+      <Route path="/contacts" element={<AllContact/>} />
     </Routes>
   );
 

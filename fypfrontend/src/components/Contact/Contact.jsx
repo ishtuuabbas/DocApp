@@ -6,26 +6,30 @@ import Header from '../Shared/Header/Header';
 import './index.css';
 import SubHeader from '../Shared/SubHeader';
 import { Button } from 'antd';
-// import { useContactMutation } from '../../redux/api/contactApi';
-// import { message } from 'antd';
 
 const Contact = () => {
 
-    // const [contact, {isLoading, isError, error, isSuccess}]= useContactMutation();
-    const { register, handleSubmit, reset } = useForm({});
-    const onSubmit = (data) => {
-        // contact(data);
+    const { register, handleSubmit, reset,getValues } = useForm({});
+    const onSubmit = async() => {
+        try {
+            console.log("contact",getValues())
+            const response = await fetch(
+                "http://localhost:8080/api/contact/create",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  
+                  },
+                  body: JSON.stringify(getValues()), 
+                },
+              );
+        } catch (error) {
+            console.log("error",error)
+        }
         reset();
     };
     
-    // useEffect(() => {
-    //     if(isSuccess){
-    //         message.success("Successfully Message Send !");
-    //     }
-    //     if(isError && error){
-    //         message.error(error?.data?.message);
-    //     }
-    // }, [isSuccess, isError, error])
     return (
         <>
             <Header />
@@ -97,14 +101,13 @@ const Contact = () => {
                                     <div className="col-md-12">
                                         <div className="form-group">
                                             <label className='form-label'>Message</label>
-                                            <textarea required {...register("text")} className="form-control mb-3" cols="30" rows="10" placeholder="enter your message"/>
+                                            <textarea required {...register("message")} className="form-control mb-3" cols="30" rows="10" placeholder="enter your message"/>
                                         </div>
                                     </div>
 
                                     <div className="text-center mt-3 mb-5">
-                                       <Button type="submit"  variant="contained" sx={{ mt: 3, mb: 2 }} >
+                                       <Button type="button" onClick={onSubmit}  variant="contained" sx={{ mt: 3, mb: 2 }} >
                                         Sent Message</Button>
-                                        {/* <button disabled={isLoading} type='submit' className="appointment-btn">Send Message</button> */}
                                     </div>
                                 </form>
                             </div>
@@ -113,8 +116,7 @@ const Contact = () => {
                 </div>
                 <div>
                     <div className="container">
-                        {/* eslint-disable-next-line */}
-                   
+
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675201.6768348725!2d73.56297730807671!3d34.909504119191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e463eddd6e4255%3A0x518dcc549077eb8!2sDegree%20College%20for%20Women%20Skardu!5e0!3m2!1sen!2s!4v1714892607877!5m2!1sen!2s" style={{ border: 0, width: "100%", height: "350px" }} frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>

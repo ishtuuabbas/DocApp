@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NewSpinner from "../../UI/NewSpinner";
 import { Box, Container, Typography } from "@mui/material";
 import { AuthContext } from "../../store/auth-context";
@@ -9,7 +9,6 @@ import {
   getAllDoctors,
   addDoctor,
 } from "../../utils/indexDB/doctorUtils";
-import useInternetConnectivity from "../../Hooks/useInternetConnectivity";
 const AllDoctor = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);

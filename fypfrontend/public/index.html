@@ -16,35 +16,5 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
-  <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    document.onkeydown = function (e) {
-      if (event.keyCode == 123) {
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-      }
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-      }
-    }
-    document.onkeydown = function () {
-      switch (event.keyCode) {
-        case 116: //F5 button
-          event.returnValue = false;
-          event.keyCode = 0;
-          return false;
-        case 82: //R button
-          if (event.ctrlKey) {
-            event.returnValue = false;
-            event.keyCode = 0;
-            return false;
-          }
-      }
-    }
-  </script>
+
 </html>

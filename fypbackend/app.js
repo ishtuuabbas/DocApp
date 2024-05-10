@@ -10,6 +10,8 @@ const userRoutes = require("./routes/user");
 const patientsRoutes = require("./routes/patient");
 const recordRoutes = require("./routes/record");
 const doctorRoutes = require("./routes/doctor");
+const contactRoutes = require('./routes/contact');
+
 
 app.use(bodyParser.json());
 
@@ -17,7 +19,7 @@ app.use("/api", userRoutes);
 app.use("/api", patientsRoutes);
 app.use("/api", doctorRoutes);
 app.use("/api", recordRoutes);
-
+app.use('/api',contactRoutes)
 app.use((error, req, res, next) => {
   const status = error.statusCode;
   const message = error.message;

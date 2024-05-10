@@ -87,6 +87,17 @@ export default function Navigator(props) {
         ],
       },
       {
+        id: "Contacts",
+        children: [
+          {
+            text: "All Contacts",
+            link: "/contacts",
+            icon: <GroupIcon />,
+          },
+        
+        ],
+      },
+      {
         id: "Statistics",
         children: [
           {
