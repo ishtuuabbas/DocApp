@@ -2,7 +2,7 @@
 import { Link, NavLink } from "react-router-dom"
 import { FaBars } from "react-icons/fa";
 import { Drawer, Button } from 'antd';
-import { FaHome, FaPhoneAlt, FaWrench, FaUserMd, FaAddressBook, FaBloggerB, FaSignInAlt } from "react-icons/fa";
+import { FaHome, FaPhoneAlt, FaWrench, FaAddressBook, FaSignInAlt } from "react-icons/fa";
 
 const HeaderNav = ({ open, setOpen,  }) => {
     const showDrawer = () => {

@@ -20,6 +20,7 @@ import { AlertContext } from "../../store/alert-context";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import logo from "../../assets/logo.png";
 
 const item = {
@@ -84,8 +85,21 @@ export default function Navigator(props) {
             link: "/doctor/create",
             icon: <MedicalInformationIcon />,
           },
+         
+      
         ],
       },
+      {
+        id: "Appointment",
+        children: [
+          {
+            text: "All Appointments",
+            link: "/appointments",
+        icon: <FormatListBulletedIcon />
+          },
+        ],
+      },
+     
       {
         id: "Contacts",
         children: [

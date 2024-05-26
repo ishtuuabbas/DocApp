@@ -46,9 +46,6 @@ const validationSchema = Yup.object({
   temperature: Yup.number()
     .required("Temperature is required")
     .typeError("Temperature should be a number"),
-  spo: Yup.number()
-    .required("SpO2 is required")
-    .typeError("SpO2 should be a number"),
   respiratoryRate: Yup.number()
     .required("Respiratory Rate is required")
     .typeError("Respiratory Rate should be a number"),
@@ -97,7 +94,6 @@ const PatientForm = ({ onSubmitPatientData, docNames, oldData, editMode }) => {
       fName: "",
       bloodPressure: "",
       temperature: "",
-      spo: "",
       respiratoryRate: "",
       pulsus: "",
       diabetes: "",
@@ -128,7 +124,6 @@ const PatientForm = ({ onSubmitPatientData, docNames, oldData, editMode }) => {
           visitNumber: 1,
           bloodPressure: values.bloodPressure,
           temperature: String(values.temperature),
-          spo: values.spo,
           respiratoryRate: String(values.respiratoryRate),
           pulsus: values.pulsus,
           diabetes: values.diabetes,
@@ -341,17 +336,6 @@ const PatientForm = ({ onSubmitPatientData, docNames, oldData, editMode }) => {
           />
         </Stack>
         <Stack spacing={2} direction="row" sx={{ marginBottom: 10 }}>
-          <TextField
-            type="number"
-            variant="standard"
-            color="primary"
-            label="SpO2"
-            autoComplete="spo2"
-            fullWidth
-            {...formik.getFieldProps("spo")}
-            error={formik.touched.spo && formik.errors.spo}
-            helperText={formik.touched.spo && formik.errors.spo}
-          />
           <TextField
             type="number"
             variant="standard"
@@ -590,7 +574,6 @@ const PatientForm = ({ onSubmitPatientData, docNames, oldData, editMode }) => {
               patientHealthInfo={{
                 bloodPressure: formik.values.bloodPressure,
                 temperature: formik.values.temperature,
-                spo: formik.values.spo,
                 respiratoryRate: formik.values.respiratoryRate,
                 pulsus: formik.values.pulsus,
                 diabetes: formik.values.diabetes === "true" ? "Yes" : "No",

@@ -6,10 +6,12 @@ import Header from '../Shared/Header/Header';
 import './index.css';
 import SubHeader from '../Shared/SubHeader';
 import { Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
 
     const { register, handleSubmit, reset,getValues } = useForm({});
+    const navigate = useNavigate();
     const onSubmit = async() => {
         try {
             console.log("contact",getValues())
@@ -24,9 +26,12 @@ const Contact = () => {
                   body: JSON.stringify(getValues()), 
                 },
               );
+              alert("Message send successfully")
+              navigate('/')
         } catch (error) {
-            console.log("error",error)
-        }
+            console.log("error", error);
+            alert("Message can't Send")
+              }
         reset();
     };
     
@@ -44,7 +49,7 @@ const Contact = () => {
                                     <FaLocationArrow className='icon' />
                                     <div>
                                         <h4>Location:</h4>
-                                        <p>Degree College for Girls, Skardu</p>
+                                        <p>Govt Girls Degree College, Skardu</p>
                                     </div>
                                 </div>
 
@@ -105,16 +110,30 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    <div className="text-center mt-3 mb-5">
+                                    {/* <div className="text-center mt-3 mb-5">
                                        <Button type="button" onClick={onSubmit}  variant="contained" sx={{ mt: 3, mb: 2 }} >
                                         Sent Message</Button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
+                                    </div> */}
+          <div className="text-center mt-3 mb-5">
+     
+            {/* {current === steps.length - 1 && ( */}
+              <Button
+                className="btn btn-primary px-3"
+                size="large"
+                loading={false}
+                onClick={() => onSubmit()}
+              >
+                Sent Message
+              </Button>
+              
+             {/* )} */}
+         </div>
+              </form>
+                      </div>
+                  </div>
+               </div>
+         </div>
+            <div>
                     <div className="container">
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675201.6768348725!2d73.56297730807671!3d34.909504119191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e463eddd6e4255%3A0x518dcc549077eb8!2sDegree%20College%20for%20Women%20Skardu!5e0!3m2!1sen!2s!4v1714892607877!5m2!1sen!2s" style={{ border: 0, width: "100%", height: "350px" }} frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

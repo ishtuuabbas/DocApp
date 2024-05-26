@@ -11,7 +11,7 @@ const patientsRoutes = require("./routes/patient");
 const recordRoutes = require("./routes/record");
 const doctorRoutes = require("./routes/doctor");
 const contactRoutes = require('./routes/contact');
-
+const appointmentRoutes = require('./routes/appointment');
 
 app.use(bodyParser.json());
 
@@ -19,7 +19,10 @@ app.use("/api", userRoutes);
 app.use("/api", patientsRoutes);
 app.use("/api", doctorRoutes);
 app.use("/api", recordRoutes);
-app.use('/api',contactRoutes)
+app.use('/api',contactRoutes);
+app.use('/api',appointmentRoutes);
+
+
 app.use((error, req, res, next) => {
   const status = error.statusCode;
   const message = error.message;
@@ -29,7 +32,7 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(process.env.MONGODB_SECRET_KEY)
   .then((result) => {
-    console.log("db connected, listing to 8008")
+    console.log("db connected, listing to 8080")
     app.listen(8080);
   })
   .catch((err) => console.log(err));

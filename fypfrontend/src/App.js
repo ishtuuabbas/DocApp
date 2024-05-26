@@ -18,6 +18,7 @@ import Revenue from "./pages/Stats/Revenue";
 import ClinicStats from "./pages/Stats/PatientStats";
 import Home from "./pages/User/Home";
 import LandingPage from "./components/Home/Home/Home"
+import AppointmentsTable from './pages/Appointments';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -27,6 +28,7 @@ import 'swiper/css/navigation';
 import About from './components/About/About';
 import Service from './components/Service/Service'
 import Contact from './components/Contact/Contact';
+import AppointmentPage from './components/Appointment/AppointmentPage';
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -54,7 +56,7 @@ const App = () => {
       <Route path="/users" element={<AllUsers />} />
 
       <Route path="/user/create" element={<AddUser />} />
-
+<Route path='/appointments' element={<AppointmentsTable/>}/>
       <Route path="/user/edit/:userId" element={<EditUser />} />
 
       <Route path="/auth/login" element={<Login />} />
@@ -75,6 +77,7 @@ const App = () => {
 
       <Route path="/doctor/create" element={<AddDoctor />} />
       <Route path="/contacts" element={<AllContact/>} />
+
     </Routes>
   );
 
@@ -85,6 +88,8 @@ const App = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/service" element={<Service />} />
+      
+      <Route path="/appointment" element={<AppointmentPage/>} />
       <Route path="/login" element={<Login />} />
     </Routes>
   );

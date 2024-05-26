@@ -8,8 +8,6 @@ const router = express.Router();
 
 router.get(
   "/doctors",
-  authCheck,
-  checkRole(["superadmin"]),
   doctorController.allDoctors
 );
 
@@ -99,5 +97,7 @@ router.post(
   ],
   doctorController.editDoctor
 );
+
+
 
 module.exports = router;

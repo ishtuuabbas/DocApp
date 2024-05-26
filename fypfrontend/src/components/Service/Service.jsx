@@ -172,7 +172,7 @@ const Service = () => {
                     information on choosing the right doctor for you, and ideas
                     for bringing up sensitive topics with your health care team.
                   </p>
-                  <Link to={"/doctors"} className="btn-get-started scrollto">
+                  <Link to={"/contact"} className="btn-get-started scrollto">
                     Get Started
                   </Link>
                 </div>
