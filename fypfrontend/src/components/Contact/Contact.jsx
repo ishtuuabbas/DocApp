@@ -14,7 +14,7 @@ const Contact = () => {
     const navigate = useNavigate();
     const onSubmit = async() => {
         try {
-            console.log("contact",getValues())
+            // console.log("contact",getValues())
             const response = await fetch(
                 "http://localhost:8080/api/contact/create",
                 {
@@ -110,25 +110,11 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    {/* <div className="text-center mt-3 mb-5">
-                                       <Button type="button" onClick={onSubmit}  variant="contained" sx={{ mt: 3, mb: 2 }} >
+                                    <div className="text-center mt-3 mb-5">
+                                       <Button  className="btn btn-primary px-3" onClick={onSubmit}  variant="contained" sx={{ mt: 3, mb: 2 }} >
                                         Sent Message</Button>
-                                    </div> */}
-          <div className="text-center mt-3 mb-5">
-     
-            {/* {current === steps.length - 1 && ( */}
-              <Button
-                className="btn btn-primary px-3"
-                size="large"
-                loading={false}
-                onClick={() => onSubmit()}
-              >
-                Sent Message
-              </Button>
-              
-             {/* )} */}
-         </div>
-              </form>
+                                    </div>
+                        </form>
                       </div>
                   </div>
                </div>

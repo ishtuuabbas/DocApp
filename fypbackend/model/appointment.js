@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 const appointmentSchema = new mongoose.Schema(
@@ -10,8 +11,12 @@ const appointmentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+      email: {
+        type: String,
+        required: true,    
+        },
     age: {
-      type: Number,
+      type: String,
       required: true,
     },
     gender: {
@@ -25,6 +30,8 @@ const appointmentSchema = new mongoose.Schema(
     },
     phoneNumber: {
       type: String,
+      minLenght: [11,"Phone Number must contain 11 digits!"],
+      maxLenght: [11,"Phone Number must contain 11 digits!"]
     },
     appointmentDate: {
       type: Date,
@@ -33,6 +40,7 @@ const appointmentSchema = new mongoose.Schema(
     appointmentTime: {
       type: String,
       required: true,
+      unique: true, 
     },  
     status: {
       type: String,

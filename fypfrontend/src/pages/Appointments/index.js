@@ -63,17 +63,16 @@ const Appointments = () => {
         } catch (error) {
             setError(error);
         }
-    };
 
+    };
     return (
-        <Fragment>
-       
-      <Box component="div" sx={{ marginBottom: 2, marginTop: 2 }}>
+        <React.Fragment>
+     {appointments.length === 0 && <h3>No appointment to show!</h3>}
+      <Box component="div" sx={{ mb: 4, textAlign: "left"  }}>
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
         Appointment Table
         </Typography>
       </Box>
-      <hr />
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -82,7 +81,6 @@ const Appointments = () => {
                             <TableCell>Father Name</TableCell>
                             <TableCell>Age</TableCell>
                             <TableCell>Gender</TableCell>
-                            <TableCell>Address</TableCell>
                             <TableCell>Appointment Date</TableCell>
                             <TableCell>Appointment Time</TableCell>
                             <TableCell>Status</TableCell>
@@ -96,7 +94,6 @@ const Appointments = () => {
                                 <TableCell>{appointment.fatherName}</TableCell>
                                 <TableCell>{appointment.age}</TableCell>
                                 <TableCell>{appointment.gender}</TableCell>
-                                <TableCell>{appointment.address}</TableCell>
                                 <TableCell>{appointment.appointmentDate}</TableCell>
                                 <TableCell>{appointment.appointmentTime}</TableCell>
                                 <TableCell>{appointment.status}</TableCell>
@@ -108,6 +105,8 @@ const Appointments = () => {
                                                     variant="contained" 
                                                     color="success" 
                                                     onClick={() => handleStatus(appointment._id, 'Confirmed')}
+                                                    style={{ marginLeft: '8px' }}
+                                       
                                                 >
                                                     Approve
                                                 </Button>
@@ -116,8 +115,7 @@ const Appointments = () => {
                                                 variant="contained" 
                                                 color="error" 
                                                 onClick={() => handleStatus(appointment._id, 'Cancelled')}
-                                                style={{ marginLeft: '8px' }}
-                                            >
+                                             >
                                                 Reject
                                             </Button>
                                         </>
@@ -128,8 +126,9 @@ const Appointments = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </Fragment>
+        </React.Fragment>
     );
 };
 
 export default Appointments;
+

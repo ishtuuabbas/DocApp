@@ -1,5 +1,7 @@
 import { Checkbox, message } from 'antd';
 import { useEffect, useState } from 'react';
+import "./index.css";
+
 import {
    
     FormControl,
@@ -10,12 +12,14 @@ import {
   } from "@mui/material";
 
 const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},doctors }) => {
-    const { name, fatherName, age, phoneNumber, gender, address,doctor } = selectValue;
+    const { name, fatherName, age, phoneNumber, gender, address,doctor,email } = selectValue;
 
     return (
         <form className="rounded p-3 mt-5" style={{ background: "#f8f9fa" }}>
-            <div className="row">
+            <div className='scrollable-container'>
+            <div className="row content">
               
+
 
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
@@ -32,7 +36,7 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
                         <label>Age</label>
-                        <input onChange={(e) => handleChange(e)} name='age' value={age && age} className="form-control" type="text" />
+                        <input onChange={(e) => handleChange(e)} name='age' value={age && age} className="form-control" type="number" />
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
@@ -47,11 +51,17 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},
 
     </div>
 </div>
-
+<div className="col-md-6 col-sm-12">
+                    <div className="form-group card-label mb-3">
+                        <label>Email</label>
+                        <input onChange={(e) => handleChange(e)} name='email' value={email && email} className="form-control" type="email" />
+                    </div>
+                </div>
+             
                 <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
                         <label>Phone</label>
-                        <input onChange={(e) => handleChange(e)} name='phoneNumber' value={phoneNumber && phoneNumber} className="form-control" type="text" />
+                        <input onChange={(e) => handleChange(e)} name='phoneNumber' value={phoneNumber && phoneNumber} className="form-control" type="number" />
                     </div>
                 </div>
              
@@ -62,46 +72,27 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},
                         <input onChange={(e) => handleChange(e)} name='address' value={address && address} className="form-control" type="text" />
                     </div>
                 </div>
-                <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
-          {/* <FormControl fullWidth>
-            <InputLabel id="doctor">Doctor</InputLabel>
-            <Select
-              labelId="doctor"
-              id="doctor"
-              sx={{ mb: 4 }}
-              label="Doctor"
-              name="doctor"
-              onChange={(e) => handleChange(e)}
-              value={doctor}
-           
-            >
-              {doctors.map((doc) => (
-                <MenuItem key={doc._id} value={doc._id}>
-                  {doc.name}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl> */}
-          <FormControl fullWidth>
-  <InputLabel id="doctor">Doctor</InputLabel>
-  <Select
-    labelId="doctor"
-    id="doctor"
-    sx={{ mb: 4 }}
-    label="Doctor"
-    name="doctor"
-    onChange={(e) => handleChange(e)}
-    value={doctor}
-  >
-    {doctors.map((doc) => (
-      <MenuItem key={doc._id} value={doc._id}>
-        {doc.name}
-      </MenuItem>
-    ))}
-  </Select>
-</FormControl>
-
-        </Stack>
+           <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="doctor">Doctor</InputLabel>
+                  <Select
+                    labelId="doctor"
+                    id="doctor"
+                    sx={{ mb: 4 }}
+                    label="Doctor"
+                    name="doctor"
+                    onChange={(e) => handleChange(e)}
+                    value={doctor}
+                  >
+                      {doctors.map((doc) => (
+                        <MenuItem key={doc._id} value={doc._id}>
+                          {doc.name}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+               </Stack>
+            </div>
             </div>
         </form>
     )

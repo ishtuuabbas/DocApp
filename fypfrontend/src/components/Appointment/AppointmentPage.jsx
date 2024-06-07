@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 let initialValue = {
-  name:'', fatherName:'', age:'', phoneNumber:'', gender:'', address:"", doctor:''
+  name:'', fatherName:'', age:'', phoneNumber:'', gender:'', address:"", doctor:'',email:''
 };
 const AppointmentPage = () => {
   const [current, setCurrent] = useState(0);
@@ -58,7 +58,7 @@ const navigate=useNavigate()
 
   const handleConfirmSchedule = async () => {
     try {
-      const { name, fatherName, age, phoneNumber, gender, address, doctor } =
+      const { name, fatherName, age, phoneNumber, gender, address, doctor ,email} =
         selectValue;
       await axios.post("http://localhost:8080/api/appointment/create", {
         name,
@@ -71,6 +71,7 @@ const navigate=useNavigate()
         status: "Pending",
         appointmentDate: selectedDate,
         appointmentTime: selectTime,
+        email
       });
       alert("appointment created successfully")
       navigate('/')
@@ -81,7 +82,7 @@ const navigate=useNavigate()
   };
 
   const handleDateChange = (date) => {
-    setSelectedDate(moment(date).format("YYYY-MM-DD HH:mm:ss"));
+    setSelectedDate(moment(date).format("YYYY-MM-DD"));
   };
 
   const steps = [

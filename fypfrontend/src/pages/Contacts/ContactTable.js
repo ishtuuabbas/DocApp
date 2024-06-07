@@ -10,19 +10,21 @@ import { AuthContext } from "../../store/auth-context";
 import { useNavigate } from "react-router-dom";
 import ContactItem from "./ContactItem";
 
-function ContactTable({ contacts, onContactDelete }) {
+function ContactTable({ contacts, onContactDelete=()=>{} }) {
   const navigate = useNavigate();
   const authCtx = React.useContext(AuthContext);
   const rabcSuperAdmin =
     authCtx.isLoggedIn && authCtx.user.role === "superadmin";
   const rabcAdmin = authCtx.isLoggedIn && authCtx.user.role === "admin";
 
-  if (!contacts || contacts.length === 0) {
-    return <h3>No contacts to show!</h3>;
-  }
+  // if (!contacts || contacts.length === 0) {
+  //   return <h3>No contacts to show!</h3>;
+  // }
 
   return (
     <React.Fragment>
+      {contacts.length === 0 && <h3>No contacts to show!</h3>}
+      
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>

@@ -40,7 +40,33 @@ const AllContact = () => {
     }
   };
 
-
+  const onContactDelete = async (id) => {
+    try {
+      setIsLoading(true);
+      const response = await fetch(
+        `http://localhost:8080/api/contact/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: "Bearer " + authCtx.token,
+          },
+        }
+      );
+  
+      const responseData = await response.json();
+      if (!response.ok) {
+        throw new Error(responseData.message);
+      }
+  
+      // Remove the deleted contact from the state
+      setAllContact((prevContacts) => prevContacts.filter(contact => contact._id !== id));
+  
+      setIsLoading(false);
+    } catch (err) {
+      setError(err.message || "Something went wrong!");
+      setIsLoading(false);
+    }
+  };
   useEffect(() => {
     getAllContact();
 
@@ -57,6 +83,7 @@ const AllContact = () => {
         <ContactTable
           contacts={allContact}
           haveError={error}
+          onContactDelete={onContactDelete}
       
         />
       )}

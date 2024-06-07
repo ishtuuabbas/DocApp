@@ -21,5 +21,11 @@ router.get(
   checkRole(["admin", "superadmin"]),
   contactController.getContactById
 );
-
+///delete
+router.delete(
+  "/contact/:id",
+  authCheck,
+  checkRole(["superadmin"]),
+  contactController.deleteContact
+);
 module.exports = router;

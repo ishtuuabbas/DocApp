@@ -6,7 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const ContactItem = ({ contact, onDelete }) => {
   const handleDelete = () => {
-    onDelete(contact.email);
+    onDelete(contact._id);
   };
 
   return (

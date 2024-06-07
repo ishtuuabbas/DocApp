@@ -1,23 +1,45 @@
 
 
 const Appointment = require('../model/appointment');
+const nodemailer = require('nodemailer');
+const Doctor = require('../model/doctor');
+
+
+const transporter =  nodemailer.createTransport({
+  service:'gmail',
+  auth:{
+    user:'ishtuuabbas786@gmail.com',
+    pass:'jgkjlznbcbcadsve'
+  }
+})
+
 exports.saveAppointment = async (req, res) => {
   try {
     const { name, fatherName, age, gender, address ,phoneNumber, doctor,appointmentDate,appointmentTime,status} = req.body;
 console.log("appointment", req.body)
-
+const email = req.body?.email || 'ishuuabbas786@gmail.com'
     const newAppointment = new Appointment({
       name,
       fatherName,
       gender,
       address,
-      phoneNumber,
+      phoneNumber,  
       age,
       appointmentDate,appointmentTime,status,
-      doctor
+      doctor,email
     });
+    const mailOptions = {
+      from: 'ishtuuabbas786@gmail.com',
+      to: [email],
+      subject: 'Appointment Created',
+      text: `Dear ${name}, your appointment on ${appointmentDate} has been created.`,
+    };
     await newAppointment.save();
-
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+    console.log("emal error")
+      }
+    });
     res.status(201).json({ message: 'Appointment form submitted successfully', appointment: newAppointment });
   } catch (error) {
     console.error('Error saving contact:', error);
@@ -25,11 +47,9 @@ console.log("appointment", req.body)
   }
 };
 
-
-
 exports.getAllAppointments = async (req, res) => {
   try {
-    const appointments = await Appointment.find();
+    const appointments = await Appointment.find().sort({ createdAt: -1 });
     res.status(200).json(appointments);
   } catch (error) {
     console.error('Error fetching appointment:', error);
@@ -63,16 +83,51 @@ exports.updateAppointmentStatus = async (req, res) => {
 
   try {
     const appointment = await Appointment.findById(id);
-
+const doctor = await Doctor.findById(appointment.doctor)
     if (!appointment) {
       return res.status(404).json({ message: "Appointment not found" });
     }
 
     appointment.status = status;
     await appointment.save();
-
+    
+    const mailOptions = {
+      from: 'ishtuuabbas786@gmail.com',
+      to: [appointment?.email],
+      subject: `Appointment ${status} `,
+      text: `Dear ${appointment.name}, your appointment on ${appointment.appointmentDate} has been ${status}.`,
+    };
+    const mailOptionsDoctor = {
+      from: 'ishtuuabbas786@gmail.com',
+      to: [doctor?.email],
+      subject: `Appointment ${status} `,
+      text: `Dear  ${doctor?.name}, Patient ${appointment.name},  appointment on ${appointment.appointmentDate} has been ${status}.`,
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+    console.log("emal error",error)
+      }
+    });
+    transporter.sendMail(mailOptionsDoctor, (error, info) => {
+      if (error) {
+    console.log("emal error",error)
+      }
+    });
     res.status(200).json({ message: "Appointment status updated", appointment });
   } catch (error) {
     res.status(500).json({ message: "Server error", error });
+  }
+};
+
+exports.validateAppointmentDateTime = async (req, res) => {
+  const { date, time } = req.params;
+  console.log('is apointrere', date, time,req.params )
+  const appointment = await Appointment.findOne({ appointmentDate:date, appointmentTime:time });
+ 
+console.log('dataa',appointment)
+  if (!appointment) {
+    return res.status(200).json(false); // no appointment found with given date and time, return true
+  } else {
+    return res.status(200).json(true); // appointment found with given date and time, return false
   }
 };

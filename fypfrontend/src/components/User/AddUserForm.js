@@ -56,6 +56,7 @@ const AddUserForm = ({ isLoading, onSubmitUserData }) => {
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
           ADD USER
         </Typography>
+        
       </Box>
       <form onSubmit={formik.handleSubmit}>
         <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>

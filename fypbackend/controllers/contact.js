@@ -17,7 +17,6 @@ console.log("contact", req.body)
       subject,
       message
     });
-// console.log("firstName",firstName)
     // Save the contact data to the database
     await newContact.save();
 
@@ -53,5 +52,28 @@ exports.getContactById = async (req, res) => {
   } catch (error) {
     console.error('Error fetching contact by ID:', error);
     res.status(500).json({ message: 'An error occurred while processing your request' });
+  }
+};
+///onContactDelete
+exports.deleteContact = async (req, res, next) => {
+  const id = req.params.id;
+
+
+  try {
+    const contact = await Contact.findById(id);
+    if (!contact) {
+      const error = new Error("Contact not found.");
+      error.statusCode = 404;
+      throw error;
+    }
+
+    await Contact.findByIdAndRemove(id);
+
+    res.status(200).json({ message: "Contact removed successfully!" });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
   }
 };
