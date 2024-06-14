@@ -24,6 +24,7 @@
 .select-date .select-month{
     font-size: 14px;
     font-weight: 500;
+    
 }
 .select-date .select-day-num{
     font-size: 22px;
@@ -33,6 +34,7 @@
 
 .select-time-div h4{
     font-size: 16px;
+    
 }
 .info-date-card .active{
     background-color: #1977cc;

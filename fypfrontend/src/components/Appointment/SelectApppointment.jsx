@@ -92,7 +92,7 @@ const SelectApppointment = ({
                 {amTimeSlot.map((item, id) => (
                   <div className="col-md-4 col-sm-6" key={id + 155}>
                     <Button
-                      type={item === selectTime ? "primary" : "default"}
+                      type={item === selectTime ? "success" : "default"}
                       shape=""
                       size="small"
                       className="mb-3"
@@ -114,7 +114,7 @@ const SelectApppointment = ({
                 {pmTimeSlot.map((item, id) => (
                   <div className="col-md-4" key={id + 155}>
                     <Button
-                      type={item === selectTime ? "primary" : "default"}
+                      type={item === selectTime ? "success" : "default"}
                       shape=""
                       size="small"
                       className="mb-3"

@@ -32,7 +32,7 @@ const email = req.body?.email || 'ishuuabbas786@gmail.com'
       from: 'ishtuuabbas786@gmail.com',
       to: [email],
       subject: 'Appointment Created',
-      text: `Dear ${name}, your appointment on ${appointmentDate} has been created.`,
+      text: `Dear ${name}, your appointment on ${appointmentDate} has been created. `,
     };
     await newAppointment.save();
     transporter.sendMail(mailOptions, (error, info) => {
@@ -95,25 +95,25 @@ const doctor = await Doctor.findById(appointment.doctor)
       from: 'ishtuuabbas786@gmail.com',
       to: [appointment?.email],
       subject: `Appointment ${status} `,
-      text: `Dear ${appointment.name}, your appointment on ${appointment.appointmentDate} has been ${status}.`,
+      text: `Dear ${appointment?.name}, your appointment with Dr. ${doctor.name} on ${appointment.appointmentDate} has been ${status} .`,
     };
     const mailOptionsDoctor = {
       from: 'ishtuuabbas786@gmail.com',
       to: [doctor?.email],
       subject: `Appointment ${status} `,
-      text: `Dear  ${doctor?.name}, Patient ${appointment.name},  appointment on ${appointment.appointmentDate} has been ${status}.`,
+      text: `Dear  ${doctor?.name}, Patient ${appointment.name}  appointment on ${appointment.appointmentDate} has been ${status}.`,
     };
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-    console.log("emal error",error)
+    console.log("email error",error)
       }
     });
     transporter.sendMail(mailOptionsDoctor, (error, info) => {
       if (error) {
-    console.log("emal error",error)
+    console.log("email error",error)
       }
     });
-    res.status(200).json({ message: "Appointment status updated", appointment });
+    res.status(200).json({ message: "Appointment status updated" });
   } catch (error) {
     res.status(500).json({ message: "Server error", error });
   }
@@ -121,13 +121,13 @@ const doctor = await Doctor.findById(appointment.doctor)
 
 exports.validateAppointmentDateTime = async (req, res) => {
   const { date, time } = req.params;
-  console.log('is apointrere', date, time,req.params )
+  console.log('is apointment', date, time,req.params )
   const appointment = await Appointment.findOne({ appointmentDate:date, appointmentTime:time });
  
 console.log('dataa',appointment)
   if (!appointment) {
-    return res.status(200).json(false); // no appointment found with given date and time, return true
+    return res.status(200).json(false);
   } else {
-    return res.status(200).json(true); // appointment found with given date and time, return false
+    return res.status(200).json(true);
   }
 };

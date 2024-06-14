@@ -27,13 +27,15 @@ const InfoPage = () => {
                                     <div className="icon-box mt-4 mt-xl-0">
                                         <FaHouseUser className="icon"/>
                                         <h4>Appointment</h4>
-                                        <small className='text-secondary'>24 Hours Service</small>
+                                        <small className='text-secondary'>12 Hours Service</small>
                                         <p>Schedule your appointment for a smoother and more efficient healthcare experience.</p>
                                     </div>
                                 </div>
                                 <div className="col-xl-4 d-flex align-items-stretch">
                                     <div className="icon-box mt-4 mt-xl-0">
-                                        <FaHeadset className="icon"/>
+                                        <FaHeadset className="icon" 
+                                        
+                                        />
                                         <h4>Emegency Cases</h4>
                                         <h6 className='text-secondary'>05815-960245</h6>
                                         <p>For emergencies, call your local emergency number immediately.</p>
@@ -45,9 +47,8 @@ const InfoPage = () => {
                                         <h4>Working Hours</h4>
                                         <small className='text-secondary'>Timing schedule</small>
                                         <ul className='list-group list-group-flush'>
-                                        <li className="list-group-item d-flex justify-content-between text-nowrap" ><p>Sun - Wed : </p> <p>8:00 - 17: 00</p></li>
-                                        <li className="list-group-item d-flex justify-content-between text-nowrap" ><p>Thus - Fri : </p> <p>9:00 - 17: 00</p></li>
-                                        <li className="list-group-item d-flex justify-content-between text-nowrap" ><p>Sat - Sun : </p> <p>10:00 - 17: 00</p></li>
+                                        <li className="list-group-item d-flex justify-content-between text-nowrap" ><p>Mon - Sat : </p> <p>10:00 - 22:00</p></li>
+                                        <li className="list-group-item d-flex justify-content-between text-nowrap" ><p>Sun : </p> <p>Is Off</p></li>
                                         </ul>
                                     </div>
                                 </div>

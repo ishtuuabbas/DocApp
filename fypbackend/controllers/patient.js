@@ -291,93 +291,6 @@ exports.refundMoney = async (req, res, next) => {
     next(err);
   }
 };
-// exports.insertManyPatients = async (req, res, next) => {
-//   try {
-//     const patients = req.body;
-//     console.log(patients);
-
-//     for (const patient of patients) {
-//       const ptn = patient.ptn;
-//       const existingPatient = await Patient.findOne({ ptn });
-
-//       const newRecordData = {
-//         visitNumber:
-//           patient.record.visitNumber + existingPatient.record.visitNumber,
-//         healthInfo: {
-//           bloodPressure: patient.record.bloodPressure,
-//           temperature: patient.record.temperature,
-//           respiratoryRate: patient.record.respiratoryRate,
-//           pulseRate: patient.record.pulseRate,
-//           peripheralOxygen: patient.record.spo,
-//           diabetes: patient.record.diabetes,
-//           diabetesType: patient.record.diabetesType,
-//           hypertension: patient.record.hypertension,
-//           ischemicHeartDisease: patient.record.IHD,
-//           hepatitis: patient.record.hepatitis,
-//           pregnancy: patient.record.pregnancy,
-//           previousSurgery: patient.record.previousSurgery,
-//           preMedication: patient.record.preMedication,
-//         },
-//       };
-
-//       const recordInstance = new Record(newRecordData);
-//       await recordInstance.save();
-
-//       if (existingPatient) {
-//         existingPatient.record.push(recordInstance._id);
-//         existingPatient.doctor.push(patient.selectedDoctor);
-//         existingPatient.payment = patient.payment;
-//         existingPatient.token = patient.token;
-
-//         const doctor = await Doctor.findById(patient.selectedDoctor);
-//         if (!doctor) {
-//           throw new Error("Doctor doesn't exist!");
-//         }
-//         doctor.patients.push(existingPatient._id);
-
-//         await Promise.all([existingPatient.save(), doctor.save()]);
-
-//         res.status(201).json({
-//           message: "Existing Patient's Record Added successfully!",
-//         });
-//       } else {
-//         const newPatient = new Patient({
-//           name: patient.name,
-//           age: patient.age,
-//           fatherName: patient.fName,
-//           gender: patient.gender,
-//           address: patient.address,
-//           phoneNumber: patient.phoneNumber,
-//           cnicNumber: patient.cnicNumber,
-//           ptn: ptn,
-//           payment: patient.payment,
-//           token: patient.token,
-//           record: [recordInstance._id],
-//           doctor: [patient.selectedDoctor],
-//         });
-
-//         const createdPatient = await newPatient.save();
-
-//         const doctor = await Doctor.findById(patient.selectedDoctor);
-//         if (!doctor) {
-//           throw new Error("Doctor doesn't exist!");
-//         }
-//         doctor.patients.push(createdPatient._id);
-
-//         await doctor.save();
-
-//         res.status(201).json({
-//           message: "All Patients created successfully!",
-//         });
-//       }
-//     }
-//   } catch (err) {
-//     if (!err.statusCode) {
-//       err.statusCode = 500;
-//     }
-//     next(err);
-//   }
-// };
 
 exports.insertManyPatients = async (req, res, next) => {
   try {
@@ -388,16 +301,9 @@ exports.insertManyPatients = async (req, res, next) => {
       const responses = [];
       const existingPatient = await Patient.findOne({ ptn }).populate("record");
 
-      // console.log(
-      //   existingPatient.record[existingPatient.record.length - 1].visitNumber
-      // );
 
       if (existingPatient) {
-        // console.log("Existing Patient");
-        // console.log(
-        //   existingPatient.record[existingPatient.record.length - 1].visitNumber
-        // );
-
+    
         const existingPatientVisitNumber =
           existingPatient.record[existingPatient.record.length - 1].visitNumber;
 

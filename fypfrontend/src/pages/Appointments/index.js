@@ -63,16 +63,16 @@ const Appointments = () => {
         } catch (error) {
             setError(error);
         }
-
     };
+
     return (
         <React.Fragment>
-     {appointments.length === 0 && <h3>No appointment to show!</h3>}
-      <Box component="div" sx={{ mb: 4, textAlign: "left"  }}>
-        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-        Appointment Table
-        </Typography>
-      </Box>
+            {appointments.length === 0 && <h3>No appointment to show!</h3>}
+            <Box component="div" sx={{ mb: 4, textAlign: "left" }}>
+                <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+                    Appointment Table
+                </Typography>
+            </Box>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
@@ -98,7 +98,7 @@ const Appointments = () => {
                                 <TableCell>{appointment.appointmentTime}</TableCell>
                                 <TableCell>{appointment.status}</TableCell>
                                 <TableCell>
-                                    {appointment.status !== 'Cancelled' && (
+                                    {appointment.status !== 'Cancelled' && appointment.status !== 'Confirmed' && (
                                         <>
                                             {appointment.status === 'Pending' && (
                                                 <Button 
@@ -106,7 +106,6 @@ const Appointments = () => {
                                                     color="success" 
                                                     onClick={() => handleStatus(appointment._id, 'Confirmed')}
                                                     style={{ marginLeft: '8px' }}
-                                       
                                                 >
                                                     Approve
                                                 </Button>
@@ -115,10 +114,31 @@ const Appointments = () => {
                                                 variant="contained" 
                                                 color="error" 
                                                 onClick={() => handleStatus(appointment._id, 'Cancelled')}
-                                             >
+                                                style={{ marginLeft: '8px' }}
+                                            >
                                                 Reject
                                             </Button>
                                         </>
+                                    )}
+                                    {appointment.status === 'Confirmed' && (
+                                        <Button 
+                                            variant="contained" 
+                                            color="success" 
+                                            disabled
+                                            style={{ marginLeft: '8px' }}
+                                        >
+                                            Approved
+                                        </Button>
+                                    )}
+                                    {appointment.status === 'Cancelled' && (
+                                        <Button 
+                                            variant="contained" 
+                                            color="error" 
+                                            disabled
+                                            style={{ marginLeft: '8px' }}
+                                        >
+                                            Rejected
+                                        </Button>
                                     )}
                                 </TableCell>
                             </TableRow>
@@ -131,4 +151,3 @@ const Appointments = () => {
 };
 
 export default Appointments;
-
