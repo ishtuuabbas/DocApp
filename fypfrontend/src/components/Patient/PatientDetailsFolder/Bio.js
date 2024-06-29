@@ -44,9 +44,9 @@ const validationSchema = Yup.object({
   temperature: Yup.number()
     .required("Temperature is required")
     .typeError("Temperature should be a number"),
-  spo: Yup.number()
-    .required("SpO2 is required")
-    .typeError("SpO2 should be a number"),
+  // spo: Yup.number()
+  //   .required("SpO2 is required")
+  //   .typeError("SpO2 should be a number"),
   respiratoryRate: Yup.number()
     .required("Respiratory Rate is required")
     .typeError("Respiratory Rate should be a number"),
@@ -80,7 +80,7 @@ export default function Bio({
     initialValues: {
       bloodPressure: "",
       temperature: "",
-      spo: "",
+      // spo: "",
       respiratoryRate: "",
       pulsus: "",
       diabetes: "",
@@ -105,7 +105,7 @@ export default function Bio({
           visitNumber: 1,
           bloodPressure: values.bloodPressure,
           temperature: String(values.temperature),
-          spo: values.spo,
+          // spo: values.spo,
           respiratoryRate: String(values.respiratoryRate),
           pulsus: values.pulsus,
           diabetes: values.diabetes,

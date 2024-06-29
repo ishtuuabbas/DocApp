@@ -1,42 +1,168 @@
-import React from 'react';
-import './Footer.css';
-import logo from '../../../images/logo.png';
-import { Link } from 'react-router-dom';
-import { FaAngleDoubleRight } from "react-icons/fa";
+import React from "react";
+import "./Footer.css";
+import { Link } from "react-router-dom";
+import img from "../../../images/logo.png";
+import {
+  FaGithubSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaWhatsappSquare,
+} from "react-icons/fa";
 
 const Footer = () => {
-	return (
-		<footer className="footer position-relative">
-		
-			<div className="footer-bottom">
-				<div className="container-fluid">
-
-					<div className="copyright">
-						<div className="row">
-							<div className="col-md-6 col-lg-6">
-								<div className="copyright-text">
-									<p className="mb-0"><a href="templateshub.net">
-										<div className="copyRight text-center">
-											<p>Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
-										</div></a></p>
-								</div>
-							</div>
-							<div className="col-md-6 col-lg-6">
-								<div className="copyright-menu">
-									<ul className="policy-menu d-flex gap-2 justify-content-center">
-										<Link to={'/'} className='text-white'>Terms and Conditions</Link>
-										<Link to={'/'} className='text-white'>Policy</Link>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
+  return (
+    <footer className="footer position-relative">
+      <div className="footer-bottom">
+        <div className="container-fluid">
+          <div className="copyright">
+            <div className="row">
+           
+              <div class="col-lg-4 col-md-6 footer-about">
+                <div className="footer-logo">
+					 <img src={img} alt="logo" />
 				</div>
-			</div>
+                 
+               <span class="sitename text-white">
+                 "Digitizing clinics improves patient care by streamlining
+                  operations, enhancing data management, facilitating better
+                  access to patient records, and making appointment scheduling
+                  more efficient."
+				  </span>
+        			  
+                   </div>
 
-		</footer>
-	);
+              {/*  */}
+              <div class="col-lg-2 col-md-3">
+			  <div className="copyright-menu">
+                <h4><b>Useful Links</b></h4>
+                <ul>
+                  <li>
+                    <a href="#" className="text-white">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-white">
+                      About us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-white">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <Link to={"/"} className="text-white">
+                      Terms of service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/"} className="text-white">
+                      Privacy policy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+			  </div>
+
+              <div class="col-lg-2 col-md-3">
+			  <div className="copyright-menu">
+                <h4><b>Our Services</b></h4>
+                <ul>
+                  <li>
+                    <Link to={"/"} className="text-white">
+					Cardiology                    
+					</Link>
+                  </li>
+                  <li>
+                    <Link to={"/"} className="text-white">
+					Dentistry
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/"} className="text-white">
+					Neurology
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/"} className="text-white">
+					Orthopedics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/"} className="text-white">
+					Surgery                 
+					   </Link>
+                  </li>
+                </ul>
+              </div>
+			  </div>
+              <div className="col-lg-2 col-md-3">
+                <div className="copyright-menu">
+                  <h4>
+                    <b>Follow Us</b>
+                  </h4>
+                  <ul className="d-none d-lg-flex social-links align-items-center">
+                    <li className="Social-Icon">
+                      <a
+                        href="https://www.linkedin.com/in/ishrat-abbas-879223253/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="linkedin"
+                      >
+                        <FaLinkedin />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a
+                        href="https://web.whatsapp.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="whatsapp"
+                      >
+                        <FaWhatsappSquare />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a
+                        href="https://github.com/ishtuuabbas/DocApp/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="Github"
+                      >
+                        <FaGithubSquare />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.instagram.com/ishtuuabbas/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="instagram"
+                      >
+                        <FaInstagramSquare />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+			<div className="row">
+				<marquee behavior="" direction="left">
+				       <p>
+                          Copyright {new Date().getFullYear()} All Rights
+                          Reserved
+                        </p>
+                   
+				</marquee>
+			</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

@@ -114,11 +114,11 @@ export default function Navigator(props) {
       {
         id: "Statistics",
         children: [
-          {
-            text: "Clinic Stats",
-            link: "/clinic/stats",
-            icon: <LocalHospitalIcon />,
-          },
+          // {
+          //   text: "Clinic Stats",
+          //   link: "/clinic/stats",
+          //   icon: <LocalHospitalIcon />,
+          // },
           {
             text: "Revenue",
             link: "/revenue",
@@ -196,7 +196,7 @@ export default function Navigator(props) {
             justifyContent: "center",
           }}
         >
-          <img width={70} height={50} src={logo} alt="logo" />
+          <img width={100} height={90} src={logo} alt="logo" />
         </ListItem>
         <ListItem
           sx={{

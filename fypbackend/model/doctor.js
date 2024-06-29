@@ -12,7 +12,7 @@ const doctorSchema = new mongoose.Schema(
       required: true,
     },
     experience: {
-      type: String, // You can use Number or String depending on how you want to store experience
+      type: String, 
       required: true,
     },
     email: {
@@ -23,7 +23,7 @@ const doctorSchema = new mongoose.Schema(
     patients: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Patient", // Assuming you have a "Patient" model as well
+        ref: "Patient", 
       },
     ],
   },

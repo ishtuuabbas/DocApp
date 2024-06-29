@@ -52,7 +52,8 @@ const App = () => {
   const routes = (
     <Routes>
       {/* USERS ROUTES */}
-      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Home />} /> */}
+      <Route path="/" element={<ClinicStats />} />
       <Route path="/users" element={<AllUsers />} />
 
       <Route path="/user/create" element={<AddUser />} />

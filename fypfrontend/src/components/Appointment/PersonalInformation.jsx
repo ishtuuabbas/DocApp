@@ -40,18 +40,18 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},
                     </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
-    <div className="form-group card-label mb-3">
-        <label>Gender</label>
-        <select value={gender} onChange={(e) => handleChange(e)} name='gender' className="form-control">
-            <option value="" disabled>Select your gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-         </select>
+                <div className="form-group card-label mb-3">
+                    <label>Gender</label>
+                    <select value={gender} onChange={(e) => handleChange(e)} name='gender' className="form-control">
+                        <option value="" disabled>Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
 
     </div>
 </div>
-<div className="col-md-6 col-sm-12">
+                <div className="col-md-6 col-sm-12">
                     <div className="form-group card-label mb-3">
                         <label>Email</label>
                         <input onChange={(e) => handleChange(e)} name='email' value={email && email} className="form-control" type="email" />

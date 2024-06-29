@@ -1,5 +1,5 @@
 .footer {
-    background-color: #15558d;
+    background-color:#0dcaf0;
 }
 .footer a {
     text-decoration: none;
@@ -68,7 +68,7 @@
 	margin-right: 15px;
 }
 .footer .footer-bottom .copyright {
-	border-top: 1px solid #1663a6;
+	border-top: 1px solid #0dcaf0;
 	padding: 30px 0;
 }
 .footer .footer-bottom .copyright-text p {
@@ -107,9 +107,24 @@
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	font-size: 20px;
+	font-size: 20px;			
 	transition: all 0.4s ease 0s;
 }
 .footer .social-icon ul li a:hover {
 	color: #09e5ab;
 }
+.footer-logo {
+    width: 60%;
+    padding-left: 66px;
+}
+.social-links a {
+	color: #f6f6f6;
+	padding-left: 15px;
+	display: inline-block;
+	line-height: 1px;
+	transition: 0.3s;
+  }
+  .col-lg-4.col-md-6.footer-about {
+    padding-left: 30px;
+}
+  

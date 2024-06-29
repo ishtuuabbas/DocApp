@@ -3,7 +3,6 @@ import "./index.css";
 import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
 import ImageHeading from "../../images/doc/doctor 5.jpg";
-import img from "../../images/img/doctors-bg.jpg";
 import SubHeader from "../Shared/SubHeader";
 import AvailableServiceContent from "../Home/AvailableFeatures/AvailableServiceContent";
 
@@ -51,7 +50,7 @@ const About = () => {
             <div className="section-title text-center">
               <h2 className="text-uppercase">THE MISSION</h2>
               <p className="form-text m-0">
-                "Our mission is to revolutionize healthcare delivery by
+                "Our mission is to revolutionize healthcare delivery by 
                 seamlessly integrating digital technologies into clinics,
                 empowering healthcare professionals with efficient tools for
                 patient care, enhancing accessibility, accuracy, and quality of
@@ -63,17 +62,6 @@ const About = () => {
           </div>
           <div className="col-lg-8">
           <AvailableServiceContent/>
-            {/* <div className="row">
-              {Array(6)
-                .fill(null)
-                .map((_, id) => (
-                  <div className="col-lg-4 col-md-6 col-sm-6" key={id + 3}>
-                    <div className="award-img">
-                      <img src={img} alt="" className="img-fluid" />
-                    </div>
-                  </div>
-                ))}
-            </div> */}
           </div>
         </div>
       </div>

@@ -11,8 +11,9 @@ const ClinicStats = () => {
   return (
     <div>
       <div>
-        <h1 className="text-4xl mt-8 font-bold text-dash-blue">
-          PATIENT STATISTICS
+        <h1 className="text-4xl mt-8 font-bold text-dash-blue ">
+          {/* PATIENT STATISTICS */}
+          Dashboard
         </h1>
       </div>
       <FlexInit>

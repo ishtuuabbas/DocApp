@@ -9,10 +9,12 @@ import SelectApppointment from "./SelectApppointment";
 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import SubHeader from "../Shared/SubHeader";
 
 let initialValue = {
   name:'', fatherName:'', age:'', phoneNumber:'', gender:'', address:"", doctor:'',email:''
 };
+
 const AppointmentPage = () => {
   const [current, setCurrent] = useState(0);
   const [selectedDate, setSelectedDate] = useState("");
@@ -119,6 +121,10 @@ const navigate=useNavigate()
   return (
     <>
       <Header />
+      <SubHeader
+        title="Appointment"
+        subtitle="This aims to reduce patient waiting times and save time for both patients and doctors by using an online appointment system.."
+      />
       <div className="container" style={{ marginTop: "8rem", bottom: "5rem" }}>
         <div
           className="container"

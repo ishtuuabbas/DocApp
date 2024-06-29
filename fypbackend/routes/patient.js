@@ -12,7 +12,7 @@ router.get(
   checkRole(["user", "admin", "superadmin"]),
   patientController.getAllPatients
 );
-
+router.get('/patient/total',patientController.totalPatients)
 router.get(
   "/patient/growth-trend",
   authCheck,

@@ -8,7 +8,7 @@ const BioItem = ({ patientRecord }) => {
         {patientRecord.bloodPressure}
       </TableCell>
       <TableCell align="right">{patientRecord.temperature}</TableCell>
-      <TableCell align="right">{patientRecord.spo}</TableCell>
+      {/* <TableCell align="right">{patientRecord.spo}</TableCell> */}
       <TableCell align="right">{patientRecord.respiratoryRate}</TableCell>
       <TableCell align="right">{patientRecord.pulsus}</TableCell>
       <TableCell align="right">{patientRecord.diabetes}</TableCell>

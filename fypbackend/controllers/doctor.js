@@ -187,3 +187,16 @@ exports.getDoctorById = async (req, res, next) => {
     next(err);
   }
 };
+
+exports.totalDoctors = async (req, res, next) => {
+  try {
+    const allDoctors = await Doctor.countDocuments({});
+console.log("all patients",allDoctors)
+    res.status(200).json({ allDoctors });
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+};

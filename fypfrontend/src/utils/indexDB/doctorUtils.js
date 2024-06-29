@@ -75,28 +75,6 @@ export const addArrayOfDoctors = async (doctorsArray) => {
   }
 };
 
-// Function to get all doctors from the database
-// export const getAllDoctors = async () => {
-//   try {
-//     const db = await openDatabase();
-//     const transaction = db.transaction("Doctors", "readonly");
-//     const store = transaction.objectStore("Doctors");
-//     const getAllRequest = store.getAll();
-
-//     getAllRequest.onsuccess = () => {
-//       const doctors = getAllRequest.result;
-//       return doctors;
-//     };
-
-//     getAllRequest.onerror = (event) => {
-//       console.error("Error getting doctors:", event.target.error);
-//     };
-//   } catch (error) {
-//     console.error("Error opening database:", error);
-//   }
-// };
-
-// Function to get all doctors from the database
 export const getAllDoctors = () => {
   return new Promise((resolve, reject) => {
     openDatabase()

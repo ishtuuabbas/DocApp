@@ -119,12 +119,6 @@ const PatientTemplate = React.forwardRef(
                 </span>
               </div>
               <div className={classes.infoItem}>
-                <span className={classes.infoKey}>SpO2:</span>
-                <span className={classes.infoValue}>
-                  {patientHealthInfo.spo} %
-                </span>
-              </div>
-              <div className={classes.infoItem}>
                 <span className={classes.infoKey}>RR:</span>
                 <span className={classes.infoValue}>
                   {patientHealthInfo.respiratoryRate} b/m
@@ -194,7 +188,7 @@ const PatientTemplate = React.forwardRef(
         </div>
         <footer className={classes.footer}>
           <div className={classes.footerPara}>
-            Copyright © 2023. All rights reserved
+            Copyright © 2024. All rights reserved
           </div>
         </footer>
       </div>

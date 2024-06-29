@@ -10,6 +10,7 @@ import Header from '../../Shared/Header/Header';
 import Service from '../Services/Service';
 
 import Gallery from '../Gallery/Gallery';
+import DoctorsSection from '../DR/DoctorsSection';
 
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
             <InfoPage />
             <Service />
             <ClinicAndSpecialities />
-         
+            <DoctorsSection/>
           
             <Availabe />
          

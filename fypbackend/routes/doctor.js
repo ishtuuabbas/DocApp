@@ -99,5 +99,6 @@ router.post(
 );
 
 
+router.get('/doctors/total',doctorController.totalDoctors)
 
 module.exports = router;

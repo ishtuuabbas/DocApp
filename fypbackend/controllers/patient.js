@@ -416,7 +416,7 @@ exports.insertManyPatients = async (req, res, next) => {
 exports.totalPatients = async (req, res, next) => {
   try {
     const allPatients = await Patient.countDocuments({});
-
+console.log("all patients",allPatients)
     res.status(200).json({ allPatients });
   } catch (err) {
     if (!err.statusCode) {

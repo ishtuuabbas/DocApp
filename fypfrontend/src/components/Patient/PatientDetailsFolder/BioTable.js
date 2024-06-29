@@ -16,7 +16,7 @@ export default function BioTable({ patientData }) {
           <TableRow>
             <TableCell>Blood Pressure</TableCell>
             <TableCell align="right">Temperature</TableCell>
-            <TableCell align="right">SpO2</TableCell>
+            {/* <TableCell align="right">SpO2</TableCell> */}
             <TableCell align="right">Respiratory Rate</TableCell>
             <TableCell align="right">Pulsus</TableCell>
             <TableCell align="right">Diabetes</TableCell>

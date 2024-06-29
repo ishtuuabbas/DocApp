@@ -37,10 +37,6 @@ body {
   border-radius: 10px; /* Rounded corners */
 }
 
-/* Firefox */
-/* Note: Firefox doesn't support rounded corners for scrollbar */
-/* For Firefox, you can only adjust the width */
-/* You may need to use JavaScript for a more comprehensive solution in Firefox */
 ::-moz-scrollbar {
   width: 6px; /* Width of the scrollbar */
 }
