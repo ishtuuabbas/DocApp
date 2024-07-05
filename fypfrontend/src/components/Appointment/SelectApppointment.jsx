@@ -86,7 +86,7 @@ const SelectApppointment = ({
               <div className="select-time-div">
                 <h4>
                   Morning Time{" "}
-                  <span className="text-secondary">(8AM - 12PM)</span>
+                  <span className="text-secondary">(10AM - 12PM)</span>
                 </h4>
                 <div className="row text-center mt-3">
                   {amTimeSlot.map((item, id) => (
@@ -108,7 +108,7 @@ const SelectApppointment = ({
               <div className="select-time-div">
                 <h4>
                   After Noon Time{" "}
-                  <span className="text-secondary">(1PM - 5PM)</span>
+                  <span className="text-secondary">(1PM - 9PM)</span>
                 </h4>
                 <div className="row text-center mt-3">
                   {pmTimeSlot.map((item, id) => (

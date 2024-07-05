@@ -20,7 +20,7 @@ const SubHeader = ({title, subtitle}) => {
         width: '100%',
         height: '100%',
         opacity: '0.9',
-        background: '#223a66',
+        background: '#02a0bff7',
     };
 
     return (

@@ -118,7 +118,7 @@
     padding-left: 66px;
 }
 .social-links a {
-	color: #f6f6f6;
+	color: #030303;
 	padding-left: 15px;
 	display: inline-block;
 	line-height: 1px;
@@ -127,4 +127,10 @@
   .col-lg-4.col-md-6.footer-about {
     padding-left: 30px;
 }
-  
+.IS-row {
+    background-color: white;
+    color: #02c4eb;
+    font-size: large;	
+    padding-top: 25px;
+
+}

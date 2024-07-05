@@ -6,11 +6,11 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import image1 from  "../../../assets/bg/bg5.jpg"
+import image6 from "../../../assets/bg/bg5.jpg"
 import image2 from "../../../assets/bg/bg3.jpg"
 import image3 from "../../../assets/bg/bg7.jpg"
 import image4 from "../../../assets/bg/bg8.jpg"
 import image5 from "../../../assets/bg/bg4.jpg"
-import image6 from "../../../assets/bg/bg5.jpg"
 import image7 from "../../../assets/bg/bg6.jpg"
 const sliderSettings = {
     dots: true,
@@ -23,11 +23,11 @@ const sliderSettings = {
   };
   const sliderImages = [
     // { id: 1, image: image1, alt: "Image 1" },
+    { id: 4, image: image6, alt: "Image 6" },
     { id: 2, image: image2, alt: "Image 2" },
     { id: 3, image: image3, alt: "Image 3" },
     { id: 4, image: image4, alt: "Image 4" },
     { id: 5, image: image5, alt: "Image 5" },
-    { id: 4, image: image6, alt: "Image 6" },
     { id: 5, image: image7, alt: "Image 7" },
 
   ];

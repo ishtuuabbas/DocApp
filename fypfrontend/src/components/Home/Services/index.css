@@ -7,3 +7,8 @@
     font-size: 44px;
     font-weight: bold;
 }
+img.I-img-fluid {
+    border-bottom-left-radius: 65px;
+    border-top-right-radius: 50px;
+
+}

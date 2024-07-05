@@ -19,13 +19,13 @@ const Service = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-4 col-sm-6">
                         <div className="service-img">
-                            <img src={img} alt="" className="img-fluid" />
-                            <img src={img2} alt="" className="img-fluid mt-4" />
+                            <img src={img} alt="" className="I-img-fluid" />
+                            <img src={img2} alt="" className="I-img-fluid mt-4" />
                         </div>
                     </div>
                     <div className="col-lg-4 col-sm-6">
                         <div className="service-img mt-4 mt-lg-0">
-                            <img src={img3} alt="" className="img-fluid" />
+                            <img src={img3} alt="" className="I-img-fluid" />
                         </div>
                     </div>
                     <div className="col-lg-4">

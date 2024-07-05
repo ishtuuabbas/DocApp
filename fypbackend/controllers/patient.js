@@ -8,7 +8,7 @@ const { format } = require("date-fns");
 
 exports.getAllPatients = async (req, res, next) => {
   try {
-    const allPatients = await Patient.find();
+    const allPatients = await Patient.find().sort({ createdAt: -1 });
     if (allPatients.length === 0) {
       const error = new Error("Can't Find Any Patient!");
       error.statusCode = 404;

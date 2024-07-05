@@ -3,9 +3,12 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import img from "../../../images/logo.png";
 import {
+  FaEnvelope,
+  FaFacebookSquare,
   FaGithubSquare,
   FaInstagramSquare,
   FaLinkedin,
+  FaPhoneAlt,
   FaWhatsappSquare,
 } from "react-icons/fa";
 
@@ -22,7 +25,7 @@ const Footer = () => {
 					 <img src={img} alt="logo" />
 				</div>
                  
-               <span class="sitename text-white">
+               <span class="sitename text-black">
                  "Digitizing clinics improves patient care by streamlining
                   operations, enhancing data management, facilitating better
                   access to patient records, and making appointment scheduling
@@ -37,27 +40,27 @@ const Footer = () => {
                 <h4><b>Useful Links</b></h4>
                 <ul>
                   <li>
-                    <a href="#" className="text-white">
+                    <a href="#" className="text-black">
                       Home
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white">
+                    <a href="#" className="text-black">
                       About us
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white">
+                    <a href="#" className="text-black">
                       Services
                     </a>
                   </li>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
                       Terms of service
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
                       Privacy policy
                     </Link>
                   </li>
@@ -70,27 +73,27 @@ const Footer = () => {
                 <h4><b>Our Services</b></h4>
                 <ul>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
 					Cardiology                    
 					</Link>
                   </li>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
 					Dentistry
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
 					Neurology
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
 					Orthopedics
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} className="text-white">
+                    <Link to={"/"} className="text-black">
 					Surgery                 
 					   </Link>
                   </li>
@@ -102,6 +105,7 @@ const Footer = () => {
                   <h4>
                     <b>Follow Us</b>
                   </h4>
+                 
                   <ul className="d-none d-lg-flex social-links align-items-center">
                     <li className="Social-Icon">
                       <a
@@ -111,6 +115,16 @@ const Footer = () => {
                         className="linkedin"
                       >
                         <FaLinkedin />
+                      </a>
+                    </li>
+                    <li className="Social-Icon">
+                      <a
+                        href="https://www.facebook.com/p/Govt-Girls-Degree-College-Skardu-100064667592957/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="Facebook"
+                      >
+                        <FaFacebookSquare />
                       </a>
                     </li>
                     <li>
@@ -146,10 +160,28 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
+                     <div className="d-flex mb-2 gap-2">
+                                    <FaEnvelope className='icon' />
+                                    <div>
+                                        <h4>Email:</h4>
+                                        <p>ishtuuabbas786@gmail.com</p>
+                                    </div>
+                                </div>
+
+                     <div className="d-flex mb-2 gap-2">
+                                    <FaPhoneAlt className='icon' />
+                                    <div>
+                                        <h4>Call:</h4>
+                                        <p>05815-960245</p>
+                                    </div>
+                                </div>
                 </div>
               </div>
             </div>
-			<div className="row">
+		
+          </div>
+        </div>
+        <div className="IS-row">
 				<marquee behavior="" direction="left">
 				       <p>
                           Copyright {new Date().getFullYear()} All Rights
@@ -158,8 +190,6 @@ const Footer = () => {
                    
 				</marquee>
 			</div>
-          </div>
-        </div>
       </div>
     </footer>
   );
