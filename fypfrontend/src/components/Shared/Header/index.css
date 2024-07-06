@@ -47,7 +47,7 @@
 }
 
 #header .logo a {
-    color: #2c4964;
+    color: #02c4eb;
 }
 
 #header .logo img {
@@ -129,7 +129,7 @@
     font-size: 14px;
     font-weight: 500;
     text-transform: none;
-    color: #082744;
+    color:  #02c4eb;
     border: none;
 }
 
@@ -173,7 +173,7 @@
 }
 
 .mobile-nav-toggle {
-    color: #2c4964;
+    color:  #02c4eb;
     font-size: 28px;
     cursor: pointer;
     display: none;

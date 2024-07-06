@@ -45,12 +45,12 @@
 }
 
 a {
-    color: #05335c;
+    color:  #02c4eb;
     text-decoration: none !important;
 }
 
 a:hover {
-    color: rgb(20, 104, 177);
+    color: rgb(11, 127, 156);
     text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     height: 100%;
-    color: #272b41;
+    color:  #02c4eb;
     background-color: #f8f9fa;
 }
 
@@ -68,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #272b41;
+    color:  #02c4eb;
     font-weight: 500;
 }
 
@@ -103,7 +103,7 @@ h6 {
 }
 
 a {
-    color: #2E3842;
+    color: #2e4240;
     text-decoration: none;
 }
 
@@ -171,7 +171,7 @@ a:focus {
     font-weight: bold;
     padding-bottom: 20px;
     position: relative;
-    color: #2c4964;
+    color: #02c4eb;
 }
 
 .section-title h2::before {
@@ -228,7 +228,7 @@ a:focus {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #2c4964;
+    color: #02c4eb;
 }
 
 .change-photo-btn {
@@ -247,7 +247,7 @@ a:focus {
 }
 
 .change-photo-btn:hover {
-    background-color: #094b85;
+    background-color: #096c85;
     border-radius: 50px;
     color: #fff;
 }

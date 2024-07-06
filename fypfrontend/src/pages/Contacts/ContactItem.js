@@ -21,7 +21,7 @@ const ContactItem = ({ contact, onDelete }) => {
       <TableCell align="right">{contact?.subject}</TableCell>
       <TableCell align="right">{contact?.message}</TableCell>
       <TableCell align="right">
-        <IconButton aria-label="delete" onClick={handleDelete}>
+        <IconButton aria-label="delete" color="error" onClick={handleDelete}>
           <DeleteIcon />
         </IconButton>
       </TableCell>

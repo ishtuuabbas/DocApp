@@ -9,6 +9,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Loader from "../../UI/Loader";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Header from "../Shared/Header/Header";
+import Footer from "../Shared/Footer/Footer";
+
 
 const defaultTheme = createTheme();
 
@@ -35,8 +38,12 @@ function SignupForm({ onSubmitLoginData, isLoading }) {
     },
   });
   return (
+    <>
+    <Header />
+    {/* <div className="container" style={{ marginBottom: 100, marginTop: 100 }}></div> */}
+   
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs"style={{ marginBottom: 100, marginTop: 300 }}>
         <CssBaseline />
         <Box
           sx={{
@@ -99,6 +106,10 @@ function SignupForm({ onSubmitLoginData, isLoading }) {
         </Box>
       </Container>
     </ThemeProvider>
+   
+   
+    <Footer />
+    </>
   );
 }
 

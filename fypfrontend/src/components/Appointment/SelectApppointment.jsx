@@ -40,7 +40,7 @@ const SelectApppointment = ({
               <p className="py-2 border-bottom info-head-date">
                 {selectedDate
                   ? `Selected - ${moment(selectedDate).format("LL")}`
-                  : "Pick a Date"}
+                  : "Select Your Desired Date for Appointment"}
               </p>
               <div className="info-date-card row">
                 {last7Days.map((item, index) => (
@@ -80,7 +80,7 @@ const SelectApppointment = ({
                     )
                       .add(30, "minutes")
                       .format("hh:mm A")}`
-                  : "Pick a Time"}
+                  : "Select Your Desired Time-Slot for Appointment"}
               </p>
 
               <div className="select-time-div">

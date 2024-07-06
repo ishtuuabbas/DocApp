@@ -134,3 +134,10 @@
     padding-top: 25px;
 
 }
+.IS-cont {
+    display: flex;
+    justify-content: flex-start;
+}
+.IS {
+    padding: 0 5px;
+}

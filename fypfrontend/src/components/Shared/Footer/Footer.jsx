@@ -160,20 +160,29 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
-                     <div className="d-flex mb-2 gap-2">
-                                    <FaEnvelope className='icon' />
-                                    <div>
-                                        <h4>Email:</h4>
-                                        <p>ishtuuabbas786@gmail.com</p>
-                                    </div>
+                     <div className="IS-cont">
+                      <div className="IS">
+
+                      <FaEnvelope className='icon' />
+                      </div>
+                            <div className="IS">
+                            <h5>Email:</h5>                        
+                            <p>ishtuuabbas786@gmail.com</p>
+                         </div>
+                                    
                                 </div>
 
-                     <div className="d-flex mb-2 gap-2">
-                                    <FaPhoneAlt className='icon' />
-                                    <div>
-                                        <h4>Call:</h4>
-                                        <p>05815-960245</p>
-                                    </div>
+                     <div className="IS-cont">
+                      <div className="IS">
+
+                      <FaPhoneAlt className='icon' />
+                      </div>
+                            <div className="IS">  
+                              <h5>Call:</h5>
+                              <p>05815-960245</p>
+                            
+                              </div>   
+                                  
                                 </div>
                 </div>
               </div>
