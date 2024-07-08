@@ -22,3 +22,8 @@
     background: url("../../images/doc/doc4.jpg") no-repeat 50% 50%;
 
 }
+img.img-fluid.rounded.shadow {
+   
+    width: 22rem;
+    margin-left: 5rem;
+}

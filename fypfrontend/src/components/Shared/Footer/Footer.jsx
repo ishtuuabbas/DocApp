@@ -26,16 +26,16 @@ const Footer = () => {
 				</div>
                  
                <span class="sitename text-black">
-                 "Digitizing clinics improves patient care by streamlining
+                  Digitizing clinics improves patient care by streamlining
                   operations, enhancing data management, facilitating better
                   access to patient records, and making appointment scheduling
-                  more efficient."
+                  more efficient.
 				  </span>
         			  
                    </div>
 
               {/*  */}
-              <div class="col-lg-2 col-md-3">
+              <div class="col-lg-3 col-md-3">
 			  <div className="copyright-menu">
                 <h4><b>Useful Links</b></h4>
                 <ul>
@@ -100,7 +100,7 @@ const Footer = () => {
                 </ul>
               </div>
 			  </div>
-              <div className="col-lg-2 col-md-3">
+              <div className="col-lg-3 col-md-3">
                 <div className="copyright-menu">
                   <h4>
                     <b>Follow Us</b>

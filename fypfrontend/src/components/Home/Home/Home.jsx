@@ -11,6 +11,7 @@ import Service from '../Services/Service';
 
 import Gallery from '../Gallery/Gallery';
 import DoctorsSection from '../DR/DoctorsSection';
+import IS from '../IS/IS';
 
 
 const Home = () => {
@@ -24,9 +25,8 @@ const Home = () => {
             <DoctorsSection/>
           
             <Availabe />
-         
-          
             <Gallery/>
+            <IS/>
             <Footer />
         </>
     );

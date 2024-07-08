@@ -33,7 +33,7 @@ const SelectApppointment = ({
 
   return (
     <>
-      <div style={{ marginTop: "5rem" }}>
+      <div style={{ marginTop: "3rem" }}>
         <dir className="p-3" style={{ background: "#f8f9fa" }}>
           <div className="row">
             <div className="col-md-5 col-sm-12 mt-3 border-end">
@@ -45,7 +45,7 @@ const SelectApppointment = ({
               <div className="info-date-card row">
                 {last7Days.map((item, index) => (
                   <div
-                    key={index + 5}
+                    key={index + 7}
                     className="mb-3 col-md-6"
                     onClick={() => handleDateChange(item)}
                   >
@@ -78,7 +78,7 @@ const SelectApppointment = ({
                       selectTime,
                       "hh:mm A"
                     )
-                      .add(30, "minutes")
+                      .add(15, "minutes")
                       .format("hh:mm A")}`
                   : "Select Your Desired Time-Slot for Appointment"}
               </p>

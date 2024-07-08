@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
-import ImageHeading from "../../images/doc/doctor 5.jpg";
+import ImageHeading from "../../images/doc/teeth.webp";
 import SubHeader from "../Shared/SubHeader";
 import AvailableServiceContent from "../Home/AvailableFeatures/AvailableServiceContent";
 
@@ -14,9 +14,9 @@ const About = () => {
         title="about us"
         subtitle="This aims to streamline the manual clinic system and digitize the paperwork process.."
       />
-      <div className="container" style={{ marginBottom: 100, marginTop: 100 }}>
+      <div className="container" >
         <div className="row p-5">
-          <div className="col-lg-4">
+          <div className="col-lg-6">
             <div className="section-title text-center">
               <h2 className="text-uppercase">Our Doctors</h2>
               <p className="form-text m-0">Never stop learning....</p>
@@ -29,7 +29,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-lg-8">
+          <div className="col-lg-6">
             <img
               src={ImageHeading}
               alt=""
@@ -41,22 +41,24 @@ const About = () => {
 
       <div
         className="container"
-        style={{ marginBottom: 100, marginTop: 100 }}
+        // style={{ marginBottom: 80, marginTop: 80 }}
       ></div>
 
-      <div className="container" style={{ marginBottom: 100, marginTop: 100 }}>
+      <div className="container" 
+      // style={{ marginBottom: 80, marginTop: 60 }}
+      >
         <div className="row align-items-center">
           <div className="col-lg-4">
             <div className="section-title text-center">
               <h2 className="text-uppercase">THE MISSION</h2>
               <p className="form-text m-0">
-                "Our mission is to revolutionize healthcare delivery by 
+                Our mission is to revolutionize healthcare delivery by 
                 seamlessly integrating digital technologies into clinics,
                 empowering healthcare professionals with efficient tools for
                 patient care, enhancing accessibility, accuracy, and quality of
                 medical services, while fostering a patient-centric approach
                 that prioritizes convenience, transparency, and holistic
-                well-being."
+                well-being.
               </p>
             </div>
           </div>
@@ -66,7 +68,8 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container" style={{ marginBottom: 100, marginTop: 100 }}>
+      <div className="container" 
+      style={{ marginBottom: 80, marginTop: 80 }}>
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="mb-4 section-title text-center">
@@ -83,14 +86,14 @@ const About = () => {
 
       <div
         className="container say-about"
-        style={{ marginBottom: 100, marginTop: 100 }}
+        style={{ marginBottom: 80, marginTop: 80 }}
       >
         <div className="row">
           <div className="col-lg-6 offset-lg-6">
             <div className="mb-4 section-title text-center">
               <h2 className="text-uppercase">Vision Statement</h2>
               <p className="form-text m-0">
-                <q>
+                
                   Our vision is to revolutionize healthcare delivery through
                   seamless digitization of clinics, fostering a future where
                   every patient experiences personalized, efficient, and
@@ -102,7 +105,7 @@ const About = () => {
                   landscape where digitized clinics serve as hubs of holistic
                   care, breaking down barriers and advancing the standard of
                   healthcare worldwide.
-                </q>
+               
               </p>
             </div>
           </div>

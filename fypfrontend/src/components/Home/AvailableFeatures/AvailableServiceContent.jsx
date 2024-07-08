@@ -37,6 +37,7 @@ const AvailableServiceContent = () => {
                     ))
                 }
             </Swiper>
+            
         </div>
     )
 }

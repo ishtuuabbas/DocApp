@@ -2,13 +2,13 @@
   background: #e4e8ec;
   height: 40px;
   font-size: 14px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   z-index: 996;
 }
 
 #topbar.topbar-scrolled {
   top: -40px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 #topbar .contact-info a {

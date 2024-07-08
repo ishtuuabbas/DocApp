@@ -21,7 +21,7 @@ const HeaderNav = ({ open, setOpen,  }) => {
                     <li><NavLink to={'/service'} className={({ isActive }) => isActive ? "nav-link scrollto active" : ""}>Service</NavLink></li>
                     <li><NavLink to={'/contact'} className={({ isActive }) => isActive ? "nav-link scrollto active" : ""}>Contact</NavLink></li>
                  
-                     <li><Link to={'/login'} className="nav-link scrollto">Login</Link></li>
+                     <li><Link to={'/login'} className="nav-link scrollto">Login for Admin</Link></li>
                 </ul>
              
                 <FaBars className='mobile-nav-toggle' onClick={showDrawer} />
@@ -41,7 +41,7 @@ const HeaderNav = ({ open, setOpen,  }) => {
                    
                     <li><NavLink to={'/contact'} className={({ isActive }) => isActive ? "nav-link scrollto active" : ""}><FaPhoneAlt className="icon" />Contact</NavLink></li>
                     
-                   <li><Link to={'/login'} className="nav-link scrollto"><FaSignInAlt className="icon" />Login</Link></li>
+                   <li><Link to={'/login'} className="nav-link scrollto"><FaSignInAlt className="icon" />Login for Admin</Link></li>
                 </ul>
             </Drawer>
         </>

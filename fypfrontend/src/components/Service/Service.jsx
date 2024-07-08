@@ -21,8 +21,10 @@ const Service = () => {
     backgroundSize: "cover",
     padding: "10px",
     position: "relative",
-    marginTop: 200,
-    marginBottom: 100,
+    marginTop: 50,
+    marginBottom: 50,
+    
+  
   };
   return (
     <>
@@ -32,7 +34,7 @@ const Service = () => {
         subtitle="We empower clinics and doctors with innovative solutions for streamlined operations, enhanced patient care, and secure data management."
       />
 
-      <div className="container" style={{ marginTop: 200, marginBottom: 100 }}>
+      <div className="container" style={{ marginTop: 100, marginBottom: 50 }}>
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="card shadow border-0 mb-5">
@@ -155,6 +157,7 @@ const Service = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
+            
           }}
         >
           <div className="row">

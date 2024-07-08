@@ -30,7 +30,7 @@ const Service = () => {
                     </div>
                     <div className="col-lg-4">
                         <div className="service-content ps-4 mt-4 mt-lg-0">
-                            <h2>Personal care <br />healthy living</h2>
+                            <h2> Personal care <br />healthy living </h2>
                             <p className="mt-4 mb-5 text-secondary form-text">Personal care for healthy living encompasses the practices we adopt to maintain our physical and mental well-being. This includes prioritizing a balanced diet rich in fruits, vegetables, and whole grains, engaging in regular physical activity, getting sufficient sleep, and managing stress effectively.</p>
                             <Link to={'/service'} className="btn-get-started scrollto">Services</Link>
                         </div>

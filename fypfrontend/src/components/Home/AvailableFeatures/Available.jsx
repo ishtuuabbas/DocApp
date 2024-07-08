@@ -19,8 +19,11 @@ const Availabe = () => {
 						</div>
 						<AvailableServiceContent/>
 					</div>
+					
 				</div>
+				
 			</div>
+		
 		</section>
 	);
 };

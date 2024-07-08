@@ -14,6 +14,7 @@ const DoctorsSection = () => {
           <Doctor key={index} doctor={doctor} />
         ))}
       </div>
+      
     </section>
   );
 };

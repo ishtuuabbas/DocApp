@@ -125,18 +125,18 @@ const navigate=useNavigate()
         title="Appointment"
         subtitle="This aims to reduce patient waiting times and save time for both patients and doctors by using an online appointment system.."
       />
-      <div className="container" style={{ marginTop: "8rem", bottom: "5rem" }}>
+      <div className="container" style={{ marginTop: "7rem", bottom: "2rem" }}>
         <div
           className="container"
-          style={{ marginBottom: "12rem", marginTop: "8rem" }}
+          style={{ marginBottom: "0rem", marginTop: "7rem" }}
         >
           <Steps current={current} items={items} />
           <div className="mb-5 mt-3 mx-3">{steps[current].content}</div>
           <div className="text-end mx-3">
             {current < steps.length - 1 && (
               <Button
-                // type="primary "
-                className="btn btn-primary px-3"
+                // className="btn btn-primary px-3"
+                className="btn-get-started scrollto "
                 size="large"
                 disabled={selectTime === "" || selectedDate === ""}
                 onClick={() => next()}
@@ -147,8 +147,8 @@ const navigate=useNavigate()
 
             {current === steps.length - 1 && (
               <Button
-                // type="primary"
-                className="btn btn-primary px-3"
+                // className="btn btn-primary px-3"
+                className="btn-get-started scrollto "
                 size="large"
                 loading={false}
                 onClick={() => handleConfirmSchedule()}
@@ -158,8 +158,8 @@ const navigate=useNavigate()
             )}
             {current > 0 && (
               <Button
-                // style={{ margin: "0 8px" }}
-                className="btn btn-dark px-3"
+                // className="btn btn-dark px-3"
+                className="btn btn-dark scrollto px-3 "
                 size="large"
                 onClick={() => prev()}
               >
