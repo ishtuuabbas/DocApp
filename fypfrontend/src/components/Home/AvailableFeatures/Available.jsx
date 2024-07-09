@@ -9,15 +9,16 @@ const Availabe = () => {
 		<section className="container section-features">
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-5 features-img">
+					<div className="col-md-4 features-img">
 						<img src={img} className="img-fluid" alt="" />
 					</div>
-					<div className="col-md-7">
+					<div className="col-md-8">
 						<div className='mb-4 section-title text-center'>
 							<h2 className='text-uppercase'>Availabe Service</h2>
 							<p className='m-0'>We offer tailored solutions to streamline our clinic's operations.</p>
 						</div>
 						<AvailableServiceContent/>
+			
 					</div>
 					
 				</div>

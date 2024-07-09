@@ -144,9 +144,8 @@ const Contact = () => {
                   </div>
 
                   <div className="text-end mx-3">
-                    
                     <Button
-                    size="large"
+                      size="large"
                       className="btn-get-started scrollto"
                       onClick={onSubmit}
                     >
@@ -161,10 +160,10 @@ const Contact = () => {
         <div>
           <div className="container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675201.6768348725!2d73.56297730807671!3d34.909504119191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e463eddd6e4255%3A0x518dcc549077eb8!2sDegree%20College%20for%20Women%20Skardu!5e0!3m2!1sen!2s!4v1714892607877!5m2!1sen!2s"
-              style={{ border: 0, width: "100%", height: "350px" }}
-              frameborder="0"
-              allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13025.499880227904!2d75.6375301!3d35.2966633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e46355072d0649%3A0x46ebeb0c9b3e6ef1!2sDoctors%20Hospital%20Skardu!5e0!3m2!1sen!2s!4v1720555470708!5m2!1sen!2s"
+              width="1100"
+              height="450"
+              allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>

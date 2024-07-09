@@ -32,12 +32,12 @@ router.get(
   checkRole(["admin", "superadmin"]),
   patientController.getGenderRatio
 );
-router.get(
-  "/patient/revenue",
-  authCheck,
-  checkRole(["admin", "superadmin"]),
-  patientController.getRevenue
-);
+// router.get(
+//   "/patient/revenue/",
+//   authCheck,
+//   checkRole(["admin", "superadmin"]),
+//   patientController.getRevenue
+// );
 
 router.get(
   "/patient/:patientId",
