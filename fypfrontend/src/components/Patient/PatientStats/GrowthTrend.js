@@ -4,62 +4,6 @@ import { Line } from "react-chartjs-2";
 import { AuthContext } from "../../../store/auth-context";
 import { AlertContext } from "../../../store/alert-context";
 
-// const getChartData = (scale) => {
-//   switch (scale) {
-//     case "daily":
-//       return {
-//         labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-//         datasets: [
-//           {
-//             label: "Patient Growth (Daily)",
-//             data: [5, 10, 8, 15, 12],
-//             borderColor: "rgba(75, 192, 192, 1)",
-//             borderWidth: 2,
-//           },
-//         ],
-//       };
-//     case "monthly":
-//       return {
-//         labels: [
-//           "Jan",
-//           "Feb",
-//           "Mar",
-//           "Apr",
-//           "May",
-//           "Jun",
-//           "Jul",
-//           "Aug",
-//           "Sep",
-//           "Oct",
-//           "Nov",
-//           "Dec",
-//         ],
-//         datasets: [
-//           {
-//             label: "Patient Growth (Monthly)",
-//             data: [50, 60, 80, 90, 70, 100, 120, 130, 110, 90, 80, 95],
-//             borderColor: "rgba(75, 192, 192, 1)",
-//             borderWidth: 2,
-//           },
-//         ],
-//       };
-//     case "yearly":
-//       return {
-//         labels: ["2021", "2022", "2023", "2024"],
-//         datasets: [
-//           {
-//             label: "Patient Growth (Yearly)",
-//             data: [200, 250, 300, 350],
-//             borderColor: "rgba(75, 192, 192, 1)",
-//             borderWidth: 2,
-//           },
-//         ],
-//       };
-//     default:
-//       return {};
-//   }
-// };
-
 const GrowthTrend = () => {
   const [scale, setScale] = useState("daily");
   const [chartData, setChartData] = useState({});

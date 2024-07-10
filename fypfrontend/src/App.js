@@ -14,9 +14,8 @@ import AllDoctor from "./pages/Doctor/AllDoctor";
 import AllContact from './pages/Contacts';
 import AddDoctor from "./pages/Doctor/AddDoctor";
 import Paperbase from "./layout/Dashboard/Paperbase";
-import Revenue from "./pages/Stats/Revenue";
 import ClinicStats from "./pages/Stats/PatientStats";
-import Home from "./pages/User/Home";
+// import Home from "./pages/User/Home";
 import LandingPage from "./components/Home/Home/Home"
 import AppointmentsTable from './pages/Appointments';
 
@@ -52,12 +51,13 @@ const App = () => {
   const routes = (
     <Routes>
       {/* USERS ROUTES */}
-      {/* <Route path="/" element={<Home />} /> */}
       <Route path="/" element={<ClinicStats />} />
       <Route path="/users" element={<AllUsers />} />
 
       <Route path="/user/create" element={<AddUser />} />
-<Route path='/appointments' element={<AppointmentsTable/>}/>
+
+      <Route path='/appointments' element={<AppointmentsTable/>}/>
+     
       <Route path="/user/edit/:userId" element={<EditUser />} />
 
       <Route path="/auth/login" element={<Login />} />
@@ -67,10 +67,6 @@ const App = () => {
       <Route path="/patient/detail/:patientId" element={<PatientDetail />} />
 
       <Route path="/patient/create" element={<AddPatient />} />
-
-      <Route path="/clinic/stats" element={<ClinicStats />} />
-
-      <Route path="/revenue" element={<Revenue />} />
 
       <Route path="/patient/edit/:patientId" element={<EditPatient />} />
 

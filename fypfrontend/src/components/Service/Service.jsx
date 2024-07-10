@@ -9,6 +9,13 @@ import img4 from "../../images/features/img3.jpg";
 import img5 from "../../images/features/img5.jpg";
 import img6 from "../../images/features/img4.jpg";
 
+import im1 from "../../images/Services/BM.jpg";
+import im2 from "../../images/Services/patient web.jpg";
+import im3 from "../../images/Services/OT.jpg";
+import im4 from "../../images/Services/IMS.jpg";
+import im5 from "../../images/Services/Lab Machine.jpg";
+import im6 from "../../images/Services/PMS.jpg";
+
 import { Link } from "react-router-dom";
 import doctorBg from "../../images/img/doctors-bg.jpg";
 
@@ -23,8 +30,6 @@ const Service = () => {
     position: "relative",
     marginTop: 50,
     marginBottom: 50,
-    
-  
   };
   return (
     <>
@@ -147,6 +152,124 @@ const Service = () => {
             </div>
           </div>
         </div>
+        <div className="row">
+          <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card shadow border-0 mb-5">
+              <img
+                src={im1}
+                alt=""
+                className="img-fluid"
+                style={{ maxHeight: "17rem", objectFit: "cover" }}
+              />
+              <div className="p-2">
+                <h4 className="mt-4 mb-2">Billing Management</h4>
+                <p className="mb-4">
+                  Billing Management offers real-time tracking of all patient
+                  services, encompassing daily room rent, consultation,
+                  operation charges, nursing fees, lab tests, imaging services,
+                  medication costs, procedures, and more, ensuring comprehensive
+                  and accurate patient billing{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card shadow border-0 mb-5">
+              <img
+                src={im2}
+                alt=""
+                className="img-fluid"
+                style={{ maxHeight: "17rem", objectFit: "cover" }}
+              />
+              <div className="p-2">
+                <h4 className="mt-4 mb-2">Patient Web Portal</h4>
+                <p className="mb-4">
+                  Patient Web Portal offers patients secure online access to
+                  their health records, appointment scheduling capabilities, and
+                  direct communication with healthcare professionals, enhancing
+                  patient engagement and healthcare delivery efficiency.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card shadow border-0 mb-5">
+              <img
+                src={im3}
+                alt=""
+                className="img-fluid"
+                style={{ maxHeight: "17rem", objectFit: "cover" }}
+              />
+              <div className="p-3">
+                <h4 className="mt-4 mb-2">Operation Theater</h4>
+                <p className="mb-4">
+                  Streamlining surgical procedures, our Operation Theater Module
+                  facilitates effortless scheduling, patient tracking, and
+                  resource management, leading to superior patient care and
+                  operational efficiency.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card shadow border-0 mb-5">
+              <img
+                src={im4}
+                alt=""
+                className="img-fluid"
+                style={{ maxHeight: "17rem", objectFit: "cover" }}
+              />
+              <div className="p-2">
+                <h4 className="mt-4 mb-2">Inventory Management System (IMS)</h4>
+                <p className="mb-4">
+                  IMS is crucial for streamlining
+                  clinic operations. It ensures the efficient tracking and reducing shortages and
+                  wastage. This allows your clinic to provide steamless care,
+                  maintain cost-effectiveness, and enhance patient satisfaction.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card shadow border-0 mb-5">
+              <img
+                src={im5}
+                alt=""
+                className="img-fluid"
+                style={{ maxHeight: "17rem", objectFit: "cover" }}
+              />
+              <div className="p-3">
+                <h4 className="mt-4 mb-2">Lab Machines Integration</h4>
+                <p className="mb-4">
+                  Lab Machines Integration enables bi-directional data exchange
+                  via HL7 between the clinic system and various lab machines,
+                  including biochemistry analyzers, hematology analyzers, and
+                  immunoassay analyzers. This automation enhances accuracy,
+                  speeds up diagnostics, and elevates patient care.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="card shadow border-0 mb-5">
+              <img
+                src={im6}
+                alt=""
+                className="img-fluid"
+                style={{ maxHeight: "17rem", objectFit: "cover" }}
+              />
+              <div className="p-3">
+                <h4 className="mt-4 mb-2">Pharmacy Management System (PMS)</h4>
+                <p className="mb-4">
+                  PMS streamlines pharmacy
+                  operations, from medication dispensation to inventory
+                  management, enhancing patient safety and improving financial
+                  performance within the clinic setting.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <section style={weArePleaseStyle}>
@@ -157,7 +280,6 @@ const Service = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            
           }}
         >
           <div className="row">

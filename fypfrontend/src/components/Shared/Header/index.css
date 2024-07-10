@@ -28,7 +28,7 @@
     background: #fff;
     transition: all 0.3s;
     z-index: 997;
-    top: 40px;
+    top: 20px;
     box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 
@@ -51,7 +51,7 @@
 }
 
 #header .logo img {
-    max-height: 40px;
+    max-height: 60px;
 }
 
 

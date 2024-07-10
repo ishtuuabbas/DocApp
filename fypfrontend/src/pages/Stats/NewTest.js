@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { Bar, Pie } from "react-chartjs-2";
-import { Chart } from "chart.js/auto"; // Add this line
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import LocalHospital from "@mui/icons-material/LocalHospital";
-import Favorite from "@mui/icons-material/Favorite";
-import Alarm from "@mui/icons-material/Alarm";
+
 
 const NewTest = () => {
   // State for the year dropdown menu
@@ -93,7 +88,6 @@ const NewTest = () => {
       <div className="w-1/2 p-2 border-2 border-sky-500">
         <div className="p-5 rounded-lg shadow-lg text-black">
           <h3 className="text-xl">Gender</h3>
-          {/* <button onClick={handleClick}>{year}</button> */}
           <div className="h-64">
             <Pie data={pieData} options={pieOptions} />
           </div>

@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const IS = () => {
   return (
-    <section className="section section-specialities position-relative">
+    <section className="section section-IS position-relative">
       <div className="container-fluid">
-        <div className="mb-5 section-title text-center">
+        <div className="mb-2 section-title text-center">
           <h2>Do you have any questions? </h2>
       <div className="row">
           <div className="IS-con col-lg-6 ps-4 mt-4">

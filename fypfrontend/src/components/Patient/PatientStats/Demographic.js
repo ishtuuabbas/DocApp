@@ -62,10 +62,10 @@ const Demographic = () => {
         <Doughnut data={genderRatioData} options={chartOptions} />
       </div>
 
-      <div className="flex-1 h-full">
+      {/* <div className="flex-1 h-full">
         <h2 className="text-xl font-base mb-2">Area-wise Distribution</h2>
         <Pie data={areaDistributionData} options={chartOptions} />
-      </div>
+      </div> */}
     </div>
   );
 };

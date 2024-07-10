@@ -7,3 +7,9 @@ img.IS-img {
     max-height: 78%;
     margin-top: 40px;
 }
+
+.section-IS {
+    background-color: rgb(243, 241, 241);
+    padding: 40px 0;
+    margin: 2rem 0;
+}

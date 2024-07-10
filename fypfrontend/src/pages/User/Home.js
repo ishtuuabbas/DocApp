@@ -1,6 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import PatientStats from "../Stats/PatientStats";
-import Revenue from "../Stats/Revenue";
 
 const Home = () => {
   return (

@@ -7,7 +7,7 @@ const Availabe = () => {
 
 	return (
 		<section className="container section-features">
-			<div className="container-fluid">
+			{/* <div className="container-fluid"> */}
 				<div className="row">
 					<div className="col-md-4 features-img">
 						<img src={img} className="img-fluid" alt="" />
@@ -23,7 +23,7 @@ const Availabe = () => {
 					
 				</div>
 				
-			</div>
+			{/* </div> */}
 		
 		</section>
 	);

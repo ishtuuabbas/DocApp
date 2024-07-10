@@ -202,7 +202,6 @@ export default function Paperbase(props) {
           />
         </Box>
         <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          {/* <Header onDrawerToggle={handleDrawerToggle} /> */}
           <Box
             component="main"
             sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
