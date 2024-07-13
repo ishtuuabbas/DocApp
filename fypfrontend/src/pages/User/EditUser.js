@@ -5,7 +5,7 @@ import { AlertContext } from "../../store/alert-context";
 import { useParams } from "react-router-dom";
 import NewSpinner from "../../UI/NewSpinner";
 import { AuthContext } from "../../store/auth-context";
-
+import { BASE_URL } from "../../constant/url";
 const EditUser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [oldUser, setOldUser] = useState({});
@@ -20,7 +20,7 @@ const EditUser = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `http://localhost:8080/api/user/${userId}`,
+          BASE_URL+`/api/user/${userId}`,
           {
             method: "GET",
             headers: {
@@ -47,7 +47,7 @@ const EditUser = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/user/edit/${userId}`,
+        BASE_URL+`/api/user/edit/${userId}`,
         {
           method: "PATCH",
           headers: {

@@ -10,7 +10,7 @@ import SelectApppointment from "./SelectApppointment";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import SubHeader from "../Shared/SubHeader";
-
+import { BASE_URL } from "../../constant/url";
 let initialValue = {
   name:'', fatherName:'', age:'', phoneNumber:'', gender:'', address:"", doctor:'',email:''
 };
@@ -31,7 +31,8 @@ const navigate=useNavigate()
 
   const getDoctors = async () => {
     try {
-      let { data } = await axios.get("http://localhost:8080/api/doctors");
+      let { data } = await axios.get(
+        BASE_URL+"/api/doctors");
       console.log("doctor data");
       setDoctorData(data?.allDoctors);
     } catch (error) {}
@@ -62,7 +63,8 @@ const navigate=useNavigate()
     try {
       const { name, fatherName, age, phoneNumber, gender, address, doctor ,email} =
         selectValue;
-      await axios.post("http://localhost:8080/api/appointment/create", {
+      await axios.post(
+        BASE_URL+"/api/appointment/create", {
         name,
         fatherName,
         age,

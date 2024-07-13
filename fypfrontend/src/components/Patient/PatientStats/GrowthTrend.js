@@ -3,7 +3,7 @@ import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 import { AuthContext } from "../../../store/auth-context";
 import { AlertContext } from "../../../store/alert-context";
-
+import { BASE_URL } from "../../../constant/url";
 const GrowthTrend = () => {
   const [scale, setScale] = useState("daily");
   const [chartData, setChartData] = useState({});
@@ -20,7 +20,7 @@ const GrowthTrend = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/growth-trend?trend=${scale}`,
+        BASE_URL+`/api/patient/growth-trend?trend=${scale}`,
         {
           method: "GET",
           headers: {

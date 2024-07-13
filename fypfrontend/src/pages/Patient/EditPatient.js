@@ -7,7 +7,7 @@ import NewSpinner from "../../UI/NewSpinner";
 import { AuthContext } from "../../store/auth-context";
 import PatientForm from "../../components/Patient/PatientForm";
 import { Container } from "@mui/material";
-
+import { BASE_URL } from "../../constant/url";
 const EditPatient = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [oldPatient, setOldPatient] = useState({});
@@ -23,7 +23,7 @@ const EditPatient = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          "http://localhost:8080/api/doctors/name",
+          BASE_URL+"/api/doctors/name",
           {
             method: "GET",
             headers: {
@@ -46,7 +46,7 @@ const EditPatient = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `http://localhost:8080/api/patient/${patientId}`,
+          BASE_URL+`/api/patient/${patientId}`,
           {
             method: "GET",
             headers: {
@@ -74,7 +74,7 @@ const EditPatient = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/edit/${patientId}`,
+        BASE_URL+ `/api/patient/edit/${patientId}`,
         {
           method: "PATCH",
           headers: {

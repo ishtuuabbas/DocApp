@@ -13,7 +13,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { AlertContext } from "../../store/alert-context";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../store/auth-context";
-
+import { BASE_URL } from "../../constant/url";
 const UserItem = ({ user, onDelete }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isConfirmationOpen, setIsConfirmationOpen] = useState(false); // State for confirmation modal
@@ -35,7 +35,7 @@ const UserItem = ({ user, onDelete }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/user/delete/${user._id}`,
+        BASE_URL+ `/api/user/delete/${user._id}`,
         {
           method: "DELETE",
           headers: {

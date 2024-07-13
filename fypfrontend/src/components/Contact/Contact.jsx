@@ -7,14 +7,15 @@ import "./index.css";
 import SubHeader from "../Shared/SubHeader";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
-
+import { BASE_URL } from "../../constant/url";
 const Contact = () => {
   const { register, handleSubmit, reset, getValues } = useForm({});
   const navigate = useNavigate();
   const onSubmit = async () => {
     try {
       // console.log("contact",getValues())
-      const response = await fetch("http://localhost:8080/api/contact/create", {
+      const response = await fetch(
+        BASE_URL+"/api/contact/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

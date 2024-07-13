@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { AuthContext } from "../../../store/auth-context";
 import { AlertContext } from "../../../store/alert-context";
-
+import { BASE_URL } from "../../../constant/url";
 const AgeDistribution = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [ageDistribution, setAgeDistribution] = useState([]);
@@ -13,7 +13,7 @@ const AgeDistribution = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/age-distribution`,
+        BASE_URL+`/api/patient/age-distribution`,
         {
           method: "GET",
           headers: {

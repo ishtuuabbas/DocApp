@@ -4,7 +4,7 @@ import NewSpinner from "../../UI/NewSpinner";
 import { AuthContext } from "../../store/auth-context";
 import DoctorForm from "../../components/Doctor/DoctorForm";
 import { addDoctor, getAllDoctors } from "../../utils/indexDB/doctorUtils";
-
+import { BASE_URL } from "../../constant/url";
 const AddDoctor = () => {
   const [isLoading, setIsLoading] = useState(false);
   const authCtx = useContext(AuthContext);
@@ -14,7 +14,7 @@ const AddDoctor = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/doctor/create",
+        BASE_URL +"/api/doctor/create",
         {
           method: "POST",
           headers: {

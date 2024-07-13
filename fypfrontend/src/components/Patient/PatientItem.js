@@ -14,6 +14,7 @@ import {
   DialogActions,
   Button,
 } from "@mui/material";
+import { BASE_URL } from "../../constant/url";
 
 const PatientItem = ({ patient, onDelete }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -45,7 +46,7 @@ const PatientItem = ({ patient, onDelete }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/delete/${patient._id}`,
+        BASE_URL+`/api/patient/delete/${patient._id}`,
         {
           method: "DELETE",
           headers: {

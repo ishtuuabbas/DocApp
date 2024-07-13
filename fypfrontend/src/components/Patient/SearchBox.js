@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { AuthContext } from "../../store/auth-context";
 import { AlertContext } from "../../store/alert-context";
 import { useNavigate } from "react-router-dom";
-
+import { BASE_URL } from "../../constant/url";
 const SearchBox = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +17,7 @@ const SearchBox = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/patient/search?q=${searchQuery}`,
+        BASE_URL+`/api/patient/search?q=${searchQuery}`,
         {
           method: "GET",
           headers: {

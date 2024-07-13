@@ -4,7 +4,7 @@ import ManIcon from "@mui/icons-material/Man";
 import Woman2Icon from "@mui/icons-material/Woman2";
 import { AuthContext } from "../../../store/auth-context";
 import { AlertContext } from "../../../store/alert-context";
-
+import { BASE_URL } from "../../../constant/url";
 export const TotalNumBox = ({ val, url }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [totalData, setTotalData] = useState([]);
@@ -25,7 +25,7 @@ export const TotalNumBox = ({ val, url }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/${url}/total`,
+        BASE_URL+`/api/${url}/total`,
         {
           method: "GET",
           headers: {

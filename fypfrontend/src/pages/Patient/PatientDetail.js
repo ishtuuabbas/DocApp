@@ -6,7 +6,7 @@ import NewSpinner from "../../UI/NewSpinner";
 import { AuthContext } from "../../store/auth-context";
 import Bio from "../../components/Patient/PatientDetailsFolder/Bio";
 import { Container } from "@mui/material";
-
+import { BASE_URL } from "../../constant/url";
 const PatientDetail = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [patient, setPatient] = useState({});
@@ -23,7 +23,7 @@ const PatientDetail = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/refund/${patientId}`,
+        BASE_URL+`/api/patient/refund/${patientId}`,
         {
           method: "GET",
           headers: {
@@ -49,7 +49,7 @@ const PatientDetail = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/${patientId}/new/record`,
+        BASE_URL+ `/api/patient/${patientId}/new/record`,
         {
           method: "POST",
           headers: {
@@ -78,7 +78,7 @@ const PatientDetail = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `http://localhost:8080/api/patient/${patientId}/all-records`,
+          BASE_URL+`/api/patient/${patientId}/all-records`,
           {
             method: "GET",
             headers: {
@@ -102,7 +102,7 @@ const PatientDetail = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          "http://localhost:8080/api/doctors/name",
+          BASE_URL+"/api/doctors/name",
           {
             method: "GET",
             headers: {
@@ -126,7 +126,7 @@ const PatientDetail = () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `http://localhost:8080/api/patient/${patientId}`,
+          BASE_URL+`/api/patient/${patientId}`,
           {
             method: "GET",
             headers: {

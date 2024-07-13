@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
 import { AuthContext } from "../../../store/auth-context";
 import { AlertContext } from "../../../store/alert-context";
-
+import { BASE_URL } from "../../../constant/url";
 const GenderRatio = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [genderRatio, setGenderRatio] = useState([]);
@@ -13,7 +13,7 @@ const GenderRatio = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/patient/gender-ratio`,
+        BASE_URL+`/api/patient/gender-ratio`,
         {
           method: "GET",
           headers: {

@@ -3,7 +3,7 @@ import moment from "moment";
 import "./index.css";
 import { doctorTimeSlot } from "../../constant/global";
 import axios from "axios";
-
+import { BASE_URL } from "../../constant/url";
 const SelectApppointment = ({
   selectedDate,
   handleDateChange,
@@ -13,7 +13,7 @@ const SelectApppointment = ({
   const handleSelectTime = async (date) => {
     try {
       let { data } = await axios.get(
-        "http://localhost:8080/api/isAvailable/" + selectedDate + "/" + date
+        BASE_URL+"/api/isAvailable/" + selectedDate + "/" + date
       );
       if (data) {
         alert("Time already booked please change time or date");

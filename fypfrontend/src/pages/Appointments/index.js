@@ -10,7 +10,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import './index.css';
 import { Box, Typography } from '@mui/material';
-
+import { BASE_URL } from '../../constant/url';
 const Appointments = () => {
     const [appointments, setAppointments] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -19,7 +19,8 @@ const Appointments = () => {
 
     const fetchAppointments = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/appointment", {
+            const response = await fetch(
+                BASE_URL+"/api/appointment", {
                 method: "GET",
                 headers: {
                     Authorization: "Bearer " + authCtx.token,
@@ -43,7 +44,8 @@ const Appointments = () => {
 
     const handleStatus = async (id, newStatus) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/appointment/${id}`, {
+            const response = await fetch(
+                BASE_URL+`/api/appointment/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

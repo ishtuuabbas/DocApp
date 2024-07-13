@@ -6,7 +6,7 @@ import { AuthContext } from "../../store/auth-context";
 import { Container } from "@mui/material";
 import { getAllDoctors } from "../../utils/indexDB/doctorUtils";
 import { addPatient, getAllPatients } from "../../utils/indexDB/patientUtils";
-
+import { BASE_URL } from "../../constant/url";
 const AddPatient = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [doctorNames, setDoctorNames] = useState([]);
@@ -19,7 +19,7 @@ const AddPatient = () => {
         try {
           setIsLoading(true);
           const response = await fetch(
-            "http://localhost:8080/api/patient/create",
+            BASE_URL+"/api/patient/create",
             {
               method: "POST",
               headers: {
@@ -52,7 +52,7 @@ const AddPatient = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/doctors/name",
+        BASE_URL+"/api/doctors/name",
         {
           method: "GET",
           headers: {

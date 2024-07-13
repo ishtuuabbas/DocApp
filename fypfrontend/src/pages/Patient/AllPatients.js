@@ -15,6 +15,7 @@ import {
   addPatient,
   getAllPatients as offlinePatients,
 } from "../../utils/indexDB/patientUtils";
+import { BASE_URL } from "../../constant/url";
 // import { useNetwork } from "../../Hooks/useNetwork";
 
 const AllPatients = () => {
@@ -28,7 +29,7 @@ const AllPatients = () => {
   const getAllPatients = async () => {
     try {
       const responseData = await sendRequest(
-        "http://localhost:8080/api/patients",
+        BASE_URL+ "/api/patients",
         "GET",
         null,
         {

@@ -9,6 +9,7 @@ import {
   getAllDoctors,
   addDoctor,
 } from "../../utils/indexDB/doctorUtils";
+import { BASE_URL } from "../../constant/url";
 const AllDoctor = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +28,7 @@ const AllDoctor = () => {
 
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/doctors",
+        BASE_URL+"/api/doctors",
         {
           method: "GET",
           headers: {

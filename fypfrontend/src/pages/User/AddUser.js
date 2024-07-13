@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AlertContext } from "../../store/alert-context";
 import { AuthContext } from "../../store/auth-context";
 import { Container } from "@mui/material";
-
+import { BASE_URL } from "../../constant/url";
 const AddUser = () => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -15,7 +15,7 @@ const AddUser = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/register",
+        BASE_URL+"/api/register",
         {
           method: "POST",
           headers: {

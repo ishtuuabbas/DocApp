@@ -12,7 +12,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import Button from "@mui/material/Button";
-
+import { BASE_URL } from "../../constant/url";
 const DoctorItem = ({ doctor, onDelete }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
@@ -32,7 +32,7 @@ const DoctorItem = ({ doctor, onDelete }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/doctor/delete/${doctor._id}`,
+        BASE_URL+`/api/doctor/delete/${doctor._id}`,
         {
           method: "DELETE",
           headers: {

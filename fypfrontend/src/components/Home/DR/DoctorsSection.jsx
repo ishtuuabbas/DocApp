@@ -5,12 +5,13 @@ import './Doctor.css';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-
+import { BASE_URL } from '../../../constant/url';
 const DoctorsSection = () => {
   const [doctors,setDoctors] =useState([])
   const getDoctors = async () => {
     try {
-      let { data } = await axios.get("http://localhost:8080/api/doctors");
+      let { data } = await axios.get(
+        BASE_URL+"/api/doctors");
       console.log("doctor data");
       setDoctors(data?.allDoctors);
     } catch (error) {}

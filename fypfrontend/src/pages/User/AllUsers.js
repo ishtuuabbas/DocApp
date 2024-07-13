@@ -3,7 +3,7 @@ import BasicTable from "../../components/User/BasicTable";
 import NewSpinner from "../../UI/NewSpinner";
 import { Box, Typography } from "@mui/material";
 import { AuthContext } from "../../store/auth-context";
-
+import { BASE_URL } from "../../constant/url";
 const AllUsers = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ const AllUsers = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/users",
+        BASE_URL+"/api/users",
         {
           method: "GET",
           headers: {

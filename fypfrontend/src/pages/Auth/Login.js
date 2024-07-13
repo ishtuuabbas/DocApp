@@ -6,7 +6,7 @@ import Error from "../../UI/Error";
 import Success from "../../UI/Success";
 import { AlertContext } from "../../store/alert-context";
 import logo from "../../assets/logo.png";
-
+import { BASE_URL } from "../../constant/url";
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -18,7 +18,7 @@ const Login = () => {
       setIsLoading(true);
 
       const response = await fetch(
-        "http://localhost:8080/api/login",
+        BASE_URL+"/api/login",
         {
           method: "POST",
           headers: {

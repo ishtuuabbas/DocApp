@@ -3,7 +3,7 @@ import NewSpinner from "../../UI/NewSpinner";
 import { Box, Container, Typography } from "@mui/material";
 import { AuthContext } from "../../store/auth-context";
 import ContactTable from "./ContactTable";
-
+import { BASE_URL } from "../../constant/url";
 
 const AllContact = () => {
   const [error, setError] = useState("");
@@ -16,7 +16,7 @@ const AllContact = () => {
      
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:8080/api/contacts",
+        BASE_URL+"/api/contacts",
         {
           method: "GET",
           headers: {
@@ -44,7 +44,7 @@ const AllContact = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/contact/${id}`,
+        BASE_URL+`/api/contact/${id}`,
         {
           method: "DELETE",
           headers: {

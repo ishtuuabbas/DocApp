@@ -1,5 +1,5 @@
 // patientsDB.js
-
+import { BASE_URL } from "../../constant/url";
 // Open or create a database
 const dbName = "PatientsDatabase";
 const dbVersion = 1;
@@ -53,26 +53,6 @@ export const addPatient = async (patientData) => {
   }
 };
 
-// Function to get all patients from the database
-// export const getAllPatients = async () => {
-//   try {
-//     const db = await openPatientDatabase();
-//     const transaction = db.transaction("Patients", "readonly");
-//     const store = transaction.objectStore("Patients");
-//     const getAllRequest = store.getAll();
-
-//     getAllRequest.onsuccess = () => {
-//       const patients = getAllRequest.result;
-//       console.log("All Patients:", patients);
-//     };
-
-//     getAllRequest.onerror = (event) => {
-//       console.error("Error getting patients:", event.target.error);
-//     };
-//   } catch (error) {
-//     console.error("Error opening database:", error);
-//   }
-// };
 
 export const getAllPatients = () => {
   return new Promise((resolve, reject) => {
@@ -112,7 +92,7 @@ export const transferPatientsToBackend = async (authCtx) => {
 
       // Assuming you have a backend API endpoint to receive the data
       const apiUrl =
-        "http://localhost:8080/api/patient/create/many";
+        BASE_URL+"/api/patient/create/many";
 
       // Make an HTTP POST request to send the data to the backend
       fetch(apiUrl, {

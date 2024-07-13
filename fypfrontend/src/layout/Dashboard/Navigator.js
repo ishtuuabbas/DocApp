@@ -111,21 +111,7 @@ export default function Navigator(props) {
         
         ],
       },
-      {
-        id: "Statistics",
-        children: [
-          // {
-          //   text: "Clinic Stats",
-          //   link: "/clinic/stats",
-          //   icon: <LocalHospitalIcon />,
-          // },
-          {
-            text: "Revenue",
-            link: "/revenue",
-            icon: <AttachMoneyIcon />,
-          },
-        ],
-      },
+   
     ];
   } else if (rabcAdminRoutes) {
     sidebarItems = [
