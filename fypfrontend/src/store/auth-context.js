@@ -31,6 +31,7 @@ const AuthContextProvider = (props) => {
         expiration: tokenExpirationDate.toISOString(),
       })
     );
+    navigate("/");
   }, []);
 
   const logout = useCallback(() => {
@@ -58,7 +59,8 @@ const AuthContextProvider = (props) => {
       storedData.token &&
       new Date(storedData.expiration) > new Date()
     ) {
-      login(storedData.user, storedData.token, new Date(storedData.expiration));
+      login(storedData.user, storedData.token,
+         new Date(storedData.expiration));
     }
   }, [login]);
 

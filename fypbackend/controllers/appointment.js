@@ -4,7 +4,7 @@ const Appointment = require('../model/appointment');
 const nodemailer = require('nodemailer');
 const Doctor = require('../model/doctor');
 
-
+// Configures the email transporter using Gmail service with provided credentials
 const transporter =  nodemailer.createTransport({
   service:'gmail',
   auth:{
@@ -13,6 +13,7 @@ const transporter =  nodemailer.createTransport({
   }
 })
 
+// Extracts appointment details from 'req.body'
 exports.saveAppointment = async (req, res) => {
   try {
     const { name, fatherName, age, gender, address ,phoneNumber, doctor,appointmentDate,appointmentTime,status} = req.body;
@@ -28,6 +29,7 @@ const email = req.body?.email || 'ishuuabbas786@gmail.com'
       appointmentDate,appointmentTime,status,
       doctor,email
     });
+    // Sets up email options and sends an email confirmation
     const mailOptions = {
       from: 'ishtuuabbas786@gmail.com',
       to: [email],
@@ -120,9 +122,9 @@ const doctor = await Doctor.findById(appointment.doctor)
 };
 
 exports.validateAppointmentDateTime = async (req, res) => {
-  const { date, time } = req.params;
+  const { date, time,doctor } = req.params;
   console.log('is apointment', date, time,req.params )
-  const appointment = await Appointment.findOne({ appointmentDate:date, appointmentTime:time });
+  const appointment = await Appointment.findOne({ appointmentDate:date, appointmentTime:time ,doctor:doctor});
  
 console.log('dataa',appointment)
   if (!appointment) {

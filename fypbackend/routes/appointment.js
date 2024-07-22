@@ -14,7 +14,7 @@ router.get(
   );
   router.post('/appointment/create',saveAppointment);
   router.patch("/appointment/:id", updateAppointmentStatus);
-router.get('/isAvailable/:date/:time',validateAppointmentDateTime)
+router.get('/isAvailable/:date/:time/:doctor',validateAppointmentDateTime)
  
   module.exports = router;
 

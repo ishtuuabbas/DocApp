@@ -72,7 +72,7 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},
                         <input onChange={(e) => handleChange(e)} name='address' value={address && address} className="form-control" type="text" />
                     </div>
                 </div>
-           <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
+           {/* <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
                 <FormControl fullWidth>
                   <InputLabel id="doctor">Doctor</InputLabel>
                   <Select
@@ -91,7 +91,7 @@ const PersonalInformation = ({ handleChange, selectValue, setPatientId =() =>{},
                       ))}
                     </Select>
                   </FormControl>
-               </Stack>
+               </Stack> */}
             </div>
             </div>
         </form>

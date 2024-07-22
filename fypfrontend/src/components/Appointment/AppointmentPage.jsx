@@ -23,7 +23,7 @@ const AppointmentPage = () => {
   const [IsDisable, setIsDisable] = useState(true);
   const [isConfirmDisable, setIsConfirmDisable] = useState(true);
   const [patientId, setPatientId] = useState("");
-  const [doctorData, setDoctorData] = useState("");
+  const [doctorData, setDoctorData] = useState([]);
 const navigate=useNavigate()
   const handleChange = async (e) => {
     setSelectValue({ ...selectValue, [e.target.name]: e.target.value });
@@ -99,6 +99,10 @@ const navigate=useNavigate()
           setSelectedDate={setSelectedDate}
           selectTime={selectTime}
           setSelectTime={setSelectTime}
+          handleChange={handleChange}
+          selectValue={selectValue}
+          // setPatientId={setPatientId}
+          doctors={doctorData}
         />
       ),
     },
@@ -147,6 +151,16 @@ const navigate=useNavigate()
               </Button>
             )}
 
+             {current > 0 && (
+              <Button
+                // className="btn btn-dark px-3"
+                className="btn btn-dark scrollto px-3 "
+                size="large"
+                onClick={() => prev()}
+              >
+                Previous
+              </Button>
+            )}
             {current === steps.length - 1 && (
               <Button
                 // className="btn btn-primary px-3"
@@ -158,16 +172,7 @@ const navigate=useNavigate()
                 Confirm
               </Button>
             )}
-            {current > 0 && (
-              <Button
-                // className="btn btn-dark px-3"
-                className="btn btn-dark scrollto px-3 "
-                size="large"
-                onClick={() => prev()}
-              >
-                Previous
-              </Button>
-            )}
+         
           </div>
         </div>
       </div>

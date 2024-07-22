@@ -4,16 +4,31 @@ import "./index.css";
 import { doctorTimeSlot } from "../../constant/global";
 import axios from "axios";
 import { BASE_URL } from "../../constant/url";
+
+import {
+   
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Stack
+} from "@mui/material";
+
 const SelectApppointment = ({
   selectedDate,
   handleDateChange,
   selectTime,
-  setSelectTime,
+  setSelectTime, handleChange, selectValue,doctors=[] 
 }) => {
+  console.log("doctorss",selectValue)
   const handleSelectTime = async (date) => {
+    if(selectValue?.doctor === ''){
+      alert("Please select doctor first!");
+      return
+    }
     try {
       let { data } = await axios.get(
-        BASE_URL+"/api/isAvailable/" + selectedDate + "/" + date
+        BASE_URL+"/api/isAvailable/" + selectedDate + "/" + date +'/' + doctor
       );
       if (data) {
         alert("Time already booked please change time or date");
@@ -30,10 +45,31 @@ const SelectApppointment = ({
   const last7Days = Array.from({ length: 7 }, (_, index) =>
     moment().clone().add(index, "days")
   );
+  const { doctor, } = selectValue;
 
   return (
     <>
       <div style={{ marginTop: "3rem" }}>
+      <Stack spacing={2} direction="row" sx={{ marginBottom: 4 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="doctor">Doctor</InputLabel>
+                  <Select
+                    labelId="doctor"
+                    id="doctor"
+                    sx={{ mb: 4 }}
+                    label="Doctor"
+                    name="doctor"
+                    onChange={(e) => handleChange(e)}
+                    value={doctor}
+                  >
+                      {doctors.map((doc) => (
+                        <MenuItem key={doc._id} value={doc._id}>
+                          {doc.name}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+               </Stack>
         <dir className="p-3" style={{ background: "#f8f9fa" }}>
           <div className="row">
             <div className="col-md-5 col-sm-12 mt-3 border-end">
@@ -74,7 +110,8 @@ const SelectApppointment = ({
             <div className="col-md-4 col-sm-12 mt-3">
               <p className="py-2 border-bottom info-head-date">
                 {selectTime
-                  ? `Selected -  ${selectTime} To ${moment(
+                  ? `Selected -  ${selectTime} To 
+                  ${moment(
                       selectTime,
                       "hh:mm A"
                     )
