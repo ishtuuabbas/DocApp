@@ -42,7 +42,7 @@ exports.newRecord = async (req, res, next) => {
         temperature: record.temperature,
         respiratoryRate: record.respiratoryRate,
         pulseRate: record.pulseRate,
-        peripheralOxygen: record.spo,
+        // peripheralOxygen: record.spo,
         diabetes: record.diabetes,
         diabetesType: record.diabetesType,
         hypertension: record.hypertension,
@@ -57,7 +57,7 @@ exports.newRecord = async (req, res, next) => {
     const recordInstance = new Record(newRecordData);
     await recordInstance.save();
 
-    existingPatient.record.push(recordInstance._id);
+    existingPatient.record.push(recordInstance._id,);
     existingPatient.doctor.push(selectedDoctor);
 
     const doctor = await Doctor.findById(selectedDoctor);

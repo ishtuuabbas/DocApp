@@ -76,7 +76,7 @@ exports.createPatient = async (req, res, next) => {
         temperature: record.temperature,
         respiratoryRate: record.respiratoryRate,
         pulseRate: record.pulseRate,
-        peripheralOxygen: record.spo,
+        // peripheralOxygen: record.spo,
         diabetes: record.diabetes,
         diabetesType: record.diabetesType,
         hypertension: record.hypertension,
@@ -316,7 +316,7 @@ exports.insertManyPatients = async (req, res, next) => {
             temperature: patient.record.temperature,
             respiratoryRate: patient.record.respiratoryRate,
             pulseRate: patient.record.pulseRate,
-            peripheralOxygen: patient.record.spo,
+            // peripheralOxygen: patient.record.spo,
             diabetes: patient.record.diabetes,
             diabetesType: patient.record.diabetesType,
             hypertension: patient.record.hypertension,
@@ -359,7 +359,7 @@ exports.insertManyPatients = async (req, res, next) => {
             temperature: patient.record.temperature,
             respiratoryRate: patient.record.respiratoryRate,
             pulseRate: patient.record.pulseRate,
-            peripheralOxygen: patient.record.spo,
+            // peripheralOxygen: patient.record.spo,
             diabetes: patient.record.diabetes,
             diabetesType: patient.record.diabetesType,
             hypertension: patient.record.hypertension,
@@ -678,7 +678,7 @@ exports.getRevenue = async (req, res, next) => {
       .map((item) => {
         return {
           label: "Daily",
-          totalRevenue: item._id.daily ? item.totalRevenue : 0,
+          // totalRevenue: item._id.daily ? item.totalRevenue : 0,
           totalDiscount: item._id.daily ? item.totalDiscount : 0,
           discountApplied: item._id.daily ? item.discountApplied : 0,
         };
@@ -687,7 +687,7 @@ exports.getRevenue = async (req, res, next) => {
         groupedData.map((item) => {
           return {
             label: "Monthly",
-            totalRevenue: item._id.monthly ? item.totalRevenue : 0,
+            // totalRevenue: item._id.monthly ? item.totalRevenue : 0,
             totalDiscount: item._id.monthly ? item.totalDiscount : 0,
             discountApplied: item._id.monthly ? item.discountApplied : 0,
           };
@@ -697,7 +697,7 @@ exports.getRevenue = async (req, res, next) => {
         groupedData.map((item) => {
           return {
             label: "Yearly",
-            totalRevenue: item._id.yearly ? item.totalRevenue : 0,
+            // totalRevenue: item._id.yearly ? item.totalRevenue : 0,
             totalDiscount: item._id.yearly ? item.totalDiscount : 0,
             discountApplied: item._id.yearly ? item.discountApplied : 0,
           };

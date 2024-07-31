@@ -20,7 +20,7 @@ const recordSchema = new mongoose.Schema(
       temperature: String,
       respiratoryRate: String,
       pulseRate: String,
-      peripheralOxygen: String,
+      // peripheralOxygen: String,
       diabetes: Boolean,
       diabetesType: String,
       hypertension: Boolean,
