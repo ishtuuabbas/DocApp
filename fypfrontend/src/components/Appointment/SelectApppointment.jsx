@@ -59,12 +59,13 @@ const SelectApppointment = ({
                     sx={{ mb: 4 }}
                     label="Doctor"
                     name="doctor"
+                    
                     onChange={(e) => handleChange(e)}
                     value={doctor}
                   >
                       {doctors.map((doc) => (
                         <MenuItem key={doc._id} value={doc._id}>
-                          {doc.name}
+                          {doc.name + "  ( "+ doc?.specialty +" )"}
                         </MenuItem>
                       ))}
                     </Select>

@@ -97,7 +97,7 @@ const doctor = await Doctor.findById(appointment.doctor)
       from: 'ishtuuabbas786@gmail.com',
       to: [appointment?.email],
       subject: `Appointment ${status} `,
-      text: `Dear ${appointment?.name}, your appointment with Dr. ${doctor.name} on ${appointment.appointmentDate} has been ${status} .`,
+      text: `Dear ${appointment?.name}, your appointment with  ${doctor.name} on ${appointment.appointmentDate} has been ${status} .`,
     };
     const mailOptionsDoctor = {
       from: 'ishtuuabbas786@gmail.com',
