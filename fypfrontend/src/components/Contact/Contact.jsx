@@ -1,13 +1,15 @@
 import React from "react";
 import Footer from "../Shared/Footer/Footer";
 import { useForm } from "react-hook-form";
-import { FaLocationArrow, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaLocationArrow, FaEnvelope, FaPhoneAlt, FaPeopleArrows, FaUser } from "react-icons/fa";
 import Header from "../Shared/Header/Header";
 import "./index.css";
 import SubHeader from "../Shared/SubHeader";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constant/url";
+import Img1 from "../../images/img/developer.jpeg";
+
 const Contact = () => {
   const { register, handleSubmit, reset, getValues } = useForm({});
   const navigate = useNavigate();
@@ -46,14 +48,21 @@ const Contact = () => {
                 className="info rounded p-2"
                 style={{ background: "#f8f9fa" }}
               >
-                <div className="d-flex mb-2 gap-2">
-                  <FaLocationArrow className="icon" />
+              <div className="d-flex mb-2 gap-2">
+                  <FaUser className="icon" />
                   <div>
-                    <h4>Location:</h4>
-                    <p>Govt Girls Degree College, Skardu</p>
+                    <h4>About Developer</h4>
+                    <p>Ishrat Fatima </p>
+                    <img src={Img1} alt="" className="img1-fluid rounded shadow" />
                   </div>
                 </div>
-
+                <div className="d-flex mb-2 gap-2">
+                  <FaPhoneAlt className="icon" />
+                  <div>
+                    <h4>Call:</h4>
+                    <p>+92 3437 714631</p>
+                  </div>
+                </div>
                 <div className="d-flex mb-2 gap-2">
                   <FaEnvelope className="icon" />
                   <div>
@@ -63,12 +72,13 @@ const Contact = () => {
                 </div>
 
                 <div className="d-flex mb-2 gap-2">
-                  <FaPhoneAlt className="icon" />
+                  <FaLocationArrow className="icon" />
                   <div>
-                    <h4>Call:</h4>
-                    <p>05815-960245</p>
+                    <h4>Location:</h4>
+                    <p>Govt Girls Degree College, Skardu</p>
                   </div>
                 </div>
+
               </div>
             </div>
 

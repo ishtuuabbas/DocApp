@@ -1,8 +1,9 @@
 
 @media (min-width: 900px){
     img.min-w-\[180px\] {
-        background-color: #0dcaf0;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
+        /* background-color: #0dcaf0; */
+        /* border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px; */
+        background-size: 12px;
     }
 }

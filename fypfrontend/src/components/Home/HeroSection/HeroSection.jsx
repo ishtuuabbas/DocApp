@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import image1 from  "../../../assets/bg/bg5.jpg"
-import image6 from "../../../assets/bg/bg5.jpg"
-import image2 from "../../../assets/bg/bg3.jpg"
-import image3 from "../../../assets/bg/bg7.jpg"
-import image4 from "../../../assets/bg/bg8.jpg"
-import image5 from "../../../assets/bg/bg4.jpg"
-import image7 from "../../../assets/bg/bg6.jpg"
+import image6 from "../../../assets/bg/2.jpg"
+import image2 from "../../../assets/bg/6.jpg"
+import image3 from "../../../assets/bg/4.jpg"
+import image4 from "../../../assets/bg/5.jpg"
+import image5 from "../../../assets/bg/8.jpg"
+import image7 from "../../../assets/bg/7.jpg"
 const sliderSettings = {
     dots: true,
     infinite: true,

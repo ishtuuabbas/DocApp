@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./index.css";
 
-// import TopHeader from "../TopHeader/TopHeader";
 import { Link } from "react-router-dom";
 import img from "../../../images/logo.png";
 
@@ -26,13 +25,7 @@ const Header = () => {
 
   return (
     <>
-      {/* <div
-        className={`navbar navbar-expand-lg navbar-light ${
-          !show && "hideTopHeader"
-        }`}
-        expand="lg"
-      >
-      </div> */}
+   
       <header id="header" className={`fixed-top ${!show && "stickyHeader"}`}>
         <div className="container d-flex align-items-center">
           <Link to={"/"} className="logo me-auto">
